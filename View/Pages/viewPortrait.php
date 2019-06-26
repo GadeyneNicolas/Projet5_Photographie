@@ -12,7 +12,7 @@
 
 <section id="portfolio_page">
 
-    <input type="button" value="Lien page portfolio" onclick="javascript:location.href='index.php?action=Portfolio'">
+    <input type="button" value="Lien page portfolio" onclick="javascript:location.href='Portfolio'">
     
     <div id="portfolio_page_global">
 

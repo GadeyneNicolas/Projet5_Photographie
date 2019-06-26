@@ -1,0 +1,55 @@
+#--------------------------------------------------
+# Répertoire : PROJET5_PHOTOGRAPHIE
+#--------------------------------------------------
+
+# Le serveur doit suivre les liens symboliques :
+Options +FollowSymlinks
+
+# Activation du module de réécriture d'URL :
+RewriteEngine on
+
+#--------------------------------------------------
+# Règles de réécriture d'URL :
+#--------------------------------------------------
+
+# Réécriture de l'URL de l'index.
+RewriteRule ^Home$ index.php [L]
+
+# Réécriture de l'URL de la page About.
+RewriteRule ^About$ index.php?action=About [L]
+
+# Réécriture d l'URL de la page Portfolio. 
+RewriteRule ^Portfolio$ index.php?action=Portfolio [L]
+
+# Réécriture d l'URL de la page Portfolio Portrait.
+RewriteRule ^Portfolio-Portrait$ index.php?action=Portrait [L]
+
+# Réécriture d l'URL de la page Portfolio Animal.
+RewriteRule ^Portfolio-Animal$ index.php?action=Animal [L]
+
+# Réécriture d l'URL de la page Portfolio Landscape.
+RewriteRule ^Portfolio-Landscape$ index.php?action=Landscape [L]
+
+# Réécriture d l'URL de la page Application.
+RewriteRule ^Application$ index.php?action=Application [L]
+
+# Réécriture d l'URL de la page Contact.
+RewriteRule ^Contact$ index.php?action=Contact [L]
+
+# Réécriture d l'URL de la page Mentions.
+RewriteRule ^Mentions$ index.php?action=Mentions [L]
+
+# Réécriture d l'URL de la page Confidential.
+RewriteRule ^Confidential$ index.php?action=Confidential [L]
+
+# Réécriture d l'URL de la page Admin.
+RewriteRule ^Admin$ index.php?action=Admin [L]
+
+# Réécriture d l'URL de la page Login.
+RewriteRule ^Login$ index.php?action=Login [L]
+
+# Réécriture d l'URL de la page Disconnection.
+RewriteRule ^Disconnection$ index.php?action=Disconnection [L]
+
+# Réécriture d l'URL de la page LoginError.
+RewriteRule ^LoginError$ index.php?action=LoginError [L]

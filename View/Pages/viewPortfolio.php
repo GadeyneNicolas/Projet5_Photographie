@@ -18,7 +18,7 @@
         <div class="portfolio_presentation_text">
             <h2>Portrait</h2>
             <p>Description</p>
-            <input type="button" value="Lien page Portrait" onclick="javascript:location.href='index.php?action=Portrait'">
+            <input type="button" value="Lien page Portrait" onclick="javascript:location.href='Portfolio-Portrait'">
         </div>
 
     </div>
@@ -29,7 +29,7 @@
         <div class="portfolio_presentation_text">
             <h2>Animalier</h2>
             <p>Description</p>
-            <input type="button" value="Lien page Animalier" onclick="javascript:location.href='index.php?action=Animal'">
+            <input type="button" value="Lien page Animalier" onclick="javascript:location.href='Portfolio-Animal'">
         </div>
 
     </div>
@@ -40,7 +40,7 @@
         <div class="portfolio_presentation_text">
             <h2>Paysage</h2>
             <p>Description</p>
-            <input type="button" value="Lien page Paysage" onclick="javascript:location.href='index.php?action=Landscape'">
+            <input type="button" value="Lien page Paysage" onclick="javascript:location.href='Portfolio-Landscape'">
         </div>
 
     </div>

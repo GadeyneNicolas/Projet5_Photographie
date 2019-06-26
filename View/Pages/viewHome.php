@@ -72,7 +72,7 @@
 <section id="contact_index">
     <div id="contact_index_text">
         <h2>Contactez-moi!</h2>
-        <input type="button" value="Lien page contact" onclick="javascript:location.href='index.php?action=Contact'">
+        <input type="button" value="Lien page contact" onclick="javascript:location.href='Contact'">
     </div>
     <div id="contact_index_newsletter">
         <h2>Newsletter</h2>

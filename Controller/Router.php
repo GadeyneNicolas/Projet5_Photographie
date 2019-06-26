@@ -1,6 +1,7 @@
 <?php
 
 require_once 'Controller/ControllerPage.php';
+require_once 'Controller/ControllerAdmin.php';
 require_once 'View/View.php';
 class Router {
 
@@ -8,6 +9,7 @@ class Router {
 
     public function __construct() {
         $this->ctrlPage = new ControllerPage();
+        $this->ctrlAdmin = new ControllerAdmin();
     }
 
     // Route une requête entrante : exécution l'action associée
@@ -35,7 +37,15 @@ class Router {
                     $this->ctrlPage->mentions();
                 } else if (($_GET['action'] == 'Login')) {
                     $this->ctrlPage->login();
-                } else if (($_GET['action'] == 'Admin')) {
+                } else if ($_GET['action'] == 'Connection') {
+                    $pseudo = $this->getParameter($_POST, 'pseudo');
+                    $mdp = $this->getParameter($_POST, 'mot_de_passe');
+                    $this->ctrlAdmin->connection($pseudo, $mdp);
+                } else if (($_GET['action'] == 'Disconnection')) {
+                    $this->ctrlPage->disconnection();
+                }  else if (($_GET['action'] == 'LoginError')) {
+                    $this->ctrlPage->loginError();
+                }  else if (($_GET['action'] == 'Admin')) {
                     $this->ctrlPage->admin();
                 }  
                  else {
