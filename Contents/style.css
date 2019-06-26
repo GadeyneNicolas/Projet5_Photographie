@@ -1,3 +1,312 @@
+/* Content table.
+
+    1- Main elements.
+        A- 
+    2- Home.
+    3- Page.
+    4- About.
+    5- Portfolio.
+    6- Application.
+    7- Contact.
+    8- Footer.
+
+*/
+
+/*  -----------------------
+        1- Main Elements.
+    ----------------------- */
+
+html {
+    overflow-x: hidden;
+}
+
 body {
-    background: grey;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/*  -----------------------
+        2- Home.
+    ----------------------- */
+
+header {
+    background: #5d697c;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    position: fixed;
+    z-index: 100;
+    right: 0;
+    top: 0;
+    left: 0;
+    height: 70px;
+    padding-bottom: 5px
+}
+
+header nav ol {
+    list-style-type: none;
+	display: flex;
+	justify-content: space-between;
+}
+
+header nav li {
+    margin-right: 15px;
+}
+
+header nav a {
+    text-decoration: none;
+	color: #29323e;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+header nav a:hover {
+    color: #b49688;
+    padding-top: 10px;
+    border-top : 2px solid;
+}
+
+header nav a:focus {
+    color: #b49688;
+    padding-top: 10px;
+    border-top : 2px solid;
+}
+
+#first {
+    color: #b49688;
+    padding-top: 10px;
+    border-top : 2px solid;
+}
+
+#header_title {
+    margin-left: 20px; 
+}
+
+#header_title h1 {
+    font-weight: bold;
+}
+
+#header_title a {
+    text-decoration: none;
+    color: #29323e;
+}
+
+#header_title a:hover {
+    color: #b49688;
+}
+
+#banner_index_img {
+    height: 600px;
+    background: blue;
+}
+
+#banner_index_text {
+   padding-top: 150px;
+   color: white;
+}
+
+#about_index {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #e6e7e8;
+}
+
+#about_index_img {
+    margin-top: 60px;
+    margin-bottom: 60px;
+    height: 450px;
+    width : 450px;
+    background: blue;
+}
+
+#about_index_text {
+   margin-top: 60px;
+   margin-bottom: 60px;
+   width: 450px;
+   height: 450px;
+   margin-left: 100px;
+   border: 2px solid black;
+}
+
+
+#portfolio_index_global {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 50px;
+}
+
+#portfolio_index_img {
+    height: 300px;
+    width: 300px;
+    margin: 25px;
+    background: blue;
+}
+
+#portfolio_index_text {
+   padding-top: 150px;
+   color: white;
+}
+
+#application_index {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e6e7e8;
+}
+
+#application_index_img {
+    margin-top: 60px;
+    margin-bottom: 60px;
+    height: 450px;
+    width : 450px;
+    background: blue;
+}
+
+#application_index_text {
+   margin-top: 60px;
+   margin-bottom: 60px;
+   width: 450px;
+   height: 450px;
+   margin-left: 100px;
+   border: 2px solid black;
+}
+
+#contact_index {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#contact_index_text {
+   margin-top: 60px;
+   margin-bottom: 60px;
+   width: 450px;
+   height: 450px;
+   
+   border: 2px solid black;
+}
+
+#contact_index_newsletter {
+    margin-top: 60px;
+   margin-bottom: 60px;
+   width: 450px;
+   height: 450px;
+   margin-left: 100px;
+   border: 2px solid black;
+}
+
+/*  -----------------------
+        3- Page.
+    ----------------------- */
+
+.banner_page_img {
+    height: 400px;
+    background: blue;
+}
+
+.banner_page_text {
+   padding-top: 150px;
+   color: white;
+}
+
+/*  -----------------------
+        4- About.
+    ----------------------- */
+
+/*  -----------------------
+        5- Portfolio.
+    ----------------------- */
+
+.portfolio_presentation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e6e7e8;
+}
+
+.portfolio_presentation_img {
+    margin-top: 60px;
+    margin-bottom: 60px;
+    height: 450px;
+    width : 450px;
+    background: blue;
+}
+
+.portfolio_presentation_text {
+   margin-top: 60px;
+   margin-bottom: 60px;
+   width: 450px;
+   height: 450px;
+   margin-left: 100px;
+   border: 2px solid black;
+}
+
+#portfolio_page_global {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 50px;
+}
+
+.portfolio_page_img {
+    height: 400px;
+    width: 400px;
+    margin: 25px;
+    background: blue;
+}
+
+.portfolio_page_text {
+   padding-top: 150px;
+   color: white;
+}
+
+/*  -----------------------
+        6- Application.
+    ----------------------- */
+
+/*  -----------------------
+        7- Contact.
+    ----------------------- */
+
+#contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#contact_infos {
+    margin-top: 60px;
+    margin-bottom: 60px;
+    width: 450px;
+    height: 450px;
+    border: 2px solid black;
+}
+
+#contact_form {
+    margin-top: 60px;
+    margin-bottom: 60px;
+    width: 450px;
+    height: 450px;
+    margin-left: 100px;
+    border: 2px solid black;
+}
+
+/*  -----------------------
+        8- Footer.
+    ----------------------- */
+
+footer {
+    background: #5d697c;
+    margin-bottom: -10px;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px;
+    padding: 20px;
 }

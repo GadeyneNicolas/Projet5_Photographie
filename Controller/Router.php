@@ -14,9 +14,35 @@ class Router {
     public function routerRequest() {
         try {
             if (isset($_GET['action'])) {
-            
-            }
-            else {  // aucune action définie : affichage de l'accueil
+
+                if (($_GET['action'] == 'About')) {
+                    $this->ctrlPage->about();
+                } else if (($_GET['action'] == 'Portfolio')) {
+                    $this->ctrlPage->portfolio();
+                }  else if (($_GET['action'] == 'Portrait')) {
+                    $this->ctrlPage->portrait();
+                }  else if (($_GET['action'] == 'Animal')) {
+                    $this->ctrlPage->animal();
+                }  else if (($_GET['action'] == 'Landscape')) {
+                    $this->ctrlPage->landscape();
+                } else if (($_GET['action'] == 'Application')) {
+                    $this->ctrlPage->application();
+                } else if (($_GET['action'] == 'Contact')) {
+                    $this->ctrlPage->contact();
+                } else if (($_GET['action'] == 'Confidential')) {
+                    $this->ctrlPage->confidential();
+                } else if (($_GET['action'] == 'Mentions')) {
+                    $this->ctrlPage->mentions();
+                } else if (($_GET['action'] == 'Login')) {
+                    $this->ctrlPage->login();
+                } else if (($_GET['action'] == 'Admin')) {
+                    $this->ctrlPage->admin();
+                }  
+                 else {
+                    throw new Exception("Action non valide");
+                    $this->ctrlPage->error();
+                }
+            } else {  // aucune action définie : affichage de l'accueil
                 $this->ctrlPage->home();
             }
         }
@@ -26,9 +52,9 @@ class Router {
     }
 
     // Affiche une erreur
-    private function error($msgError) {
+    private function error() {
         $view = new View("Error");
-        $view->generate(array('msgErreur' => $msgError));
+        $view->generate([]);
     }
 
     // Recherche un paramètre dans un tableau

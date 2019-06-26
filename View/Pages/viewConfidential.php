@@ -1,0 +1,1 @@
+<?php $this->title = "Mon Blog - Politique de confidentialité !"; ?>
