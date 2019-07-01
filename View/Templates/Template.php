@@ -26,11 +26,11 @@
             </header>
 
 
-            <div id="contenu">
+            <div class="content">
                 <?= $contents ?>
             </div> <!-- #contenu -->
 
-            <footer id="piedBlog">
+            <footer class="piedBlog">
             <a href="Mentions">Mentions légales</a> <a href="Confidential">Politique de confidentialité</a>
             </footer>
 

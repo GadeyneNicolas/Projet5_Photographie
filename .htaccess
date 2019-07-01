@@ -53,3 +53,6 @@ RewriteRule ^Disconnection$ index.php?action=Disconnection [L]
 
 # Réécriture d l'URL de la page LoginError.
 RewriteRule ^LoginError$ index.php?action=LoginError [L]
+
+# Réécriture d l'URL de la page AddPictures.
+RewriteRule ^AddPictures$ index.php?action=AddPictures [L]

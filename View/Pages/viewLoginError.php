@@ -1,8 +1,8 @@
-<p>Erreur mdp</p>
-<p>Erreur mdp</p>
-<p>Erreur mdp</p>
-<p>Erreur mdp</p><p>Erreur mdp</p><p>Erreur mdp</p>
+<section id="connection_error">
 
-<p>Erreur mdp</p>
+<h2>Vous vous êtes trompé dans le mot de passe.</h2>
 
-<a href="Login">Connectez-vous!</a>
+<p>Retour vers la page <a href="Home">d'acceuil.</a></p>
+<p>Ou bien tentez de vous <a href="Login">Connecter</a></p>
+
+</section>

@@ -28,12 +28,40 @@ body {
     text-align: center;
 }
 
+.button {
+    color: #b49688;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: 1px solid #ababab;
+    border-radius: 5px;
+    padding: 4px 8px 4px 8px;
+    background:  white;
+    box-shadow: 0px 5px 10px #ababab;
+}
+
+.content {
+    margin-top: 100px;
+}
+
+a {
+    text-decoration: none;
+    color: #8c8c8c !important;
+}
+
+a:hover {
+    color: #b49688 !important;
+}
+
+a:focus {
+    color: #b49688 !important;
+}
+
 /*  -----------------------
         2- Home.
     ----------------------- */
 
 header {
-    background: #5d697c;
+    background: #f2f2f2;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
@@ -43,13 +71,14 @@ header {
     top: 0;
     left: 0;
     height: 70px;
-    padding-bottom: 5px
+    padding-bottom: 5px;
+    border-bottom: 1px solid grey;
 }
 
 header nav ol {
     list-style-type: none;
-	display: flex;
-	justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
 }
 
 header nav li {
@@ -58,31 +87,28 @@ header nav li {
 
 header nav a {
     text-decoration: none;
-	color: #29323e;
     font-size: 1em;
     font-weight: bold;
 }
 
 header nav a:hover {
-    color: #b49688;
     padding-top: 10px;
-    border-top : 2px solid;
+    border-top: 2px solid;
 }
 
 header nav a:focus {
-    color: #b49688;
     padding-top: 10px;
-    border-top : 2px solid;
+    border-top: 2px solid;
 }
 
 #first {
     color: #b49688;
     padding-top: 10px;
-    border-top : 2px solid;
+    border-top: 2px solid;
 }
 
 #header_title {
-    margin-left: 20px; 
+    margin-left: 20px;
 }
 
 #header_title h1 {
@@ -91,7 +117,7 @@ header nav a:focus {
 
 #header_title a {
     text-decoration: none;
-    color: #29323e;
+    color: #8c8c8c;
 }
 
 #header_title a:hover {
@@ -100,36 +126,39 @@ header nav a:focus {
 
 #banner_index_img {
     height: 600px;
-    background: blue;
+    margin-top: -100px;
 }
 
-#banner_index_text {
-   padding-top: 150px;
-   color: white;
+#banner_index img {
+    width: 100%;
+    height: 100%;
 }
 
 #about_index {
+    padding-top: 60px;
+    padding-bottom: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #e6e7e8;
+    background: #f2f2f2;
 }
 
 #about_index_img {
     margin-top: 60px;
-    margin-bottom: 60px;
     height: 450px;
-    width : 450px;
-    background: blue;
+    width: 450px;
+    background: white;
+    box-shadow: 0px 5px 15px #ababab;
+}
+
+#about_index img {
+    width: 100%;
+    margin-top: 15%;
 }
 
 #about_index_text {
-   margin-top: 60px;
-   margin-bottom: 60px;
-   width: 450px;
-   height: 450px;
-   margin-left: 100px;
-   border: 2px solid black;
+    width: 450px;
+    margin-left: 100px;
 }
 
 
@@ -140,40 +169,60 @@ header nav a:focus {
     margin: 50px;
 }
 
-#portfolio_index_img {
+.portfolio_index_img {
     height: 300px;
     width: 300px;
     margin: 25px;
-    background: blue;
+    background: white;
+    box-shadow: 0px 5px 15px #ababab;
+    position: relative;
 }
 
-#portfolio_index_text {
-   padding-top: 150px;
-   color: white;
+.portfolio_index_img img {
+    width: 100%;
+    margin-top: 10%;
+}
+
+.portfolio_index_text {
+    background:  #b49688;
+    box-shadow: 0px 5px 10px #b49688;
+    width: 300px;
+    color: white;
+    position: absolute;
+    top: 70%;
+    opacity: 0;
+}
+
+.portfolio_index_text:hover {
+    opacity: 1;
 }
 
 #application_index {
+    margin-top: 60px;
+    margin-bottom: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #e6e7e8;
+    background: #f2f2f2;
 }
 
 #application_index_img {
     margin-top: 60px;
     margin-bottom: 60px;
     height: 450px;
-    width : 450px;
-    background: blue;
+    width: 450px;
+    background: white;
+    box-shadow: 0px 5px 15px #ababab;
+}
+
+#application_index img {
+    width: 100%;
+    margin-top: 15%;
 }
 
 #application_index_text {
-   margin-top: 60px;
-   margin-bottom: 60px;
-   width: 450px;
-   height: 450px;
-   margin-left: 100px;
-   border: 2px solid black;
+    width: 450px;
+    margin-left: 100px;
 }
 
 #contact_index {
@@ -183,21 +232,20 @@ header nav a:focus {
 }
 
 #contact_index_text {
-   margin-top: 60px;
-   margin-bottom: 60px;
-   width: 450px;
-   height: 450px;
-   
-   border: 2px solid black;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    width: 450px;
+    height: 450px;
+    box-shadow: 0px 5px 15px #ababab;
 }
 
 #contact_index_newsletter {
     margin-top: 60px;
-   margin-bottom: 60px;
-   width: 450px;
-   height: 450px;
-   margin-left: 100px;
-   border: 2px solid black;
+    margin-bottom: 60px;
+    width: 450px;
+    height: 450px;
+    margin-left: 100px;
+    box-shadow: 0px 5px 15px #ababab;
 }
 
 /*  -----------------------
@@ -205,13 +253,18 @@ header nav a:focus {
     ----------------------- */
 
 .banner_page_img {
-    height: 400px;
-    background: blue;
+    height: 600px;
+    margin-top: -100px;
+}
+
+.banner_page_img img {
+    width: 100%;
+    height: 100%;
 }
 
 .banner_page_text {
-   padding-top: 150px;
-   color: white;
+    padding-top: 150px;
+    color: white;
 }
 
 /*  -----------------------
@@ -223,27 +276,27 @@ header nav a:focus {
     ----------------------- */
 
 .portfolio_presentation {
+    margin-top: 80px;
+    margin-bottom: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #e6e7e8;
 }
 
 .portfolio_presentation_img {
-    margin-top: 60px;
-    margin-bottom: 60px;
     height: 450px;
-    width : 450px;
-    background: blue;
+    width: 450px;
+    background: white;
+    box-shadow: 0px 5px 15px #ababab;
 }
 
+.portfolio_presentation_img img {
+    width: 100%;
+    margin-top: 15%;
+}
 .portfolio_presentation_text {
-   margin-top: 60px;
-   margin-bottom: 60px;
-   width: 450px;
-   height: 450px;
-   margin-left: 100px;
-   border: 2px solid black;
+    width: 450px;
+    margin-left: 100px;
 }
 
 #portfolio_page_global {
@@ -261,8 +314,8 @@ header nav a:focus {
 }
 
 .portfolio_page_text {
-   padding-top: 150px;
-   color: white;
+    padding-top: 150px;
+    color: white;
 }
 
 /*  -----------------------
@@ -284,7 +337,7 @@ header nav a:focus {
     margin-bottom: 60px;
     width: 450px;
     height: 450px;
-    border: 2px solid black;
+    box-shadow: 0px 5px 15px #ababab;
 }
 
 #contact_form {
@@ -293,20 +346,111 @@ header nav a:focus {
     width: 450px;
     height: 450px;
     margin-left: 100px;
-    border: 2px solid black;
+    box-shadow: 0px 5px 15px #ababab;
 }
 
+
 /*  -----------------------
-        8- Footer.
+        8- Admin.
     ----------------------- */
 
-footer {
-    background: #5d697c;
-    margin-bottom: -10px;
-    width: 100vw;
+#connection {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 200px;
+    padding: 20px;
+    box-shadow: 0px 5px 15px #ababab;
+    margin-left: 25vw;
+    margin-right: 25vw;
+}
+
+#connection form {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+
+#connection input {
+    padding: 5px;
+    margin: 10px;
+}
+
+#connection_error {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 200px;
+    padding: 20px;
+    box-shadow: 0px 5px 15px #ababab;
+    margin-left: 25vw;
+    margin-right: 25vw;
+}
+
+#admin {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 200px;
+    padding: 20px;
+    box-shadow: 0px 5px 15px #ababab;
+    margin-left: 25vw;
+    margin-right: 25vw;
+}
+
+#add_pictures {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 200px;
+    padding: 20px;
+    box-shadow: 0px 5px 15px #ababab;
+    margin-left: 25vw;
+    margin-right: 25vw;
+}
+
+#add_pictures form {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+
+#add_pictures input {
+    padding: 5px;
+    margin: 10px;
+}
+
+/*  -----------------------
+        9- Footer.
+    ----------------------- */
+
+footer {
+    background: #f2f2f2;
+    border-top: 1px solid grey;
+    margin-bottom: -10px;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     margin-top: 80px;
     padding: 20px;
+}
+
+footer a {
+    margin: 8px;
+    text-decoration: none;
+    color: #8c8c8c;
+    font-size: 1em;
+    font-weight: bold;
 }

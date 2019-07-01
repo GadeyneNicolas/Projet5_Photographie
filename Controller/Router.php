@@ -2,6 +2,7 @@
 
 require_once 'Controller/ControllerPage.php';
 require_once 'Controller/ControllerAdmin.php';
+require_once 'Controller/ControllerPictures.php';
 require_once 'View/View.php';
 class Router {
 
@@ -10,6 +11,7 @@ class Router {
     public function __construct() {
         $this->ctrlPage = new ControllerPage();
         $this->ctrlAdmin = new ControllerAdmin();
+        $this->ctrlPictures = new ControllerPictures();
     }
 
     // Route une requête entrante : exécution l'action associée
@@ -47,7 +49,13 @@ class Router {
                     $this->ctrlPage->loginError();
                 }  else if (($_GET['action'] == 'Admin')) {
                     $this->ctrlPage->admin();
-                }  
+                }  else if (($_GET['action'] == 'AddPictures')) {
+                    $this->ctrlPage->addPictures();
+                }  else if ($_GET['action'] == 'AddNewPics') {
+                    $titlePics = $this->getParameter($_POST, 'title');
+                    $contentPics = $this->getParameter($_POST, 'content');
+                    $this->ctrlPictures->addNewPics($titlePics, $contentPics);
+                }
                  else {
                     throw new Exception("Action non valide");
                     $this->ctrlPage->error();

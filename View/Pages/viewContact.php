@@ -3,11 +3,9 @@
 <section class="banner_page">
 
     <div class="banner_page_img">
-        <div class="banner_page_text">
-            <h1>Photographie</h1>
-            <p>Description</p>
-        </div>
+    <img src="Contents/Illustration/banner-contact.jpg">
     </div>
+</section>
 </section>
 
 <section id="contact">

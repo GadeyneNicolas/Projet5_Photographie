@@ -1,11 +1,14 @@
 <?php
 
 require_once 'View/View.php';
+require_once 'Model/Pictures.php';
 
 class ControllerPage {
 
+    private $pictures;
+
     public function __construct() {
-       
+        $this->pictures = new Pictures();
     }
 
 // Affiche la liste de tous les billets du blog
@@ -78,5 +81,9 @@ class ControllerPage {
         $view = new View("LoginError");
         $view->generate([]);
     }
-}
 
+    public function addPictures() {
+        $view = new View("AddPictures");
+        $view->generate([]);
+    }
+}

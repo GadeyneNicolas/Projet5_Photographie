@@ -3,65 +3,66 @@
 <section id="banner_index">
 
     <div id="banner_index_img">
-        <div id="banner_index_text">
-            <h2>Photographie</h2>
-            <p>Description/slider</p>
-        </div>
+        <img src="Contents/Illustration/banner-index.jpg">
     </div>
+
 </section>
 
 <section id="about_index">
-    <div id="about_index_img"></div>
 
+    <div id="about_index_img">
+    <img src="Contents/Illustration/about-index.png">
+    </div>
+    
+    
     <div id="about_index_text">
             <h2>Le photographe</h2>
             <p>Description</p>
+            <input class="button" type="button" value="Lien page About" onclick="javascript:location.href='About'">
     </div>
+
 </section>
 
 <section id="portfolio_index">
 
     <div id="portfolio_index_global">
 
-    <div id="portfolio_index_img">
-        <div id="portfolio_index_text">
-            <h2>Photographie</h2>
-            <p>Description</p>
-        </div>
+    <div class="portfolio_index_img">
+
+    <img src="Contents/Illustration/portrait-index.png">
+        <a href="Portfolio-Portrait">
+            <div class="portfolio_index_text">
+                <h2>Portrait</h2>
+            </div>
+        </a>
     </div>
 
-    <div id="portfolio_index_img">
-        <div id="portfolio_index_text">
-            <h2>Photographie</h2>
-            <p>Description</p>
-        </div>
+    <div class="portfolio_index_img">
+
+    <img src="Contents/Illustration/animals-index.png">
+        <a href="Portfolio-Animal">
+            <div class="portfolio_index_text">
+                <h2>Animalier</h2>
+            </div>
+        </a>
     </div>
 
-    <div id="portfolio_index_img">
-        <div id="portfolio_index_text">
-            <h2>Photographie</h2>
-            <p>Description</p>
-        </div>
+    <div class="portfolio_index_img">
+
+    <img src="Contents/Illustration/landscape-index.png">
+        <a href="Portfolio-Landscape">
+            <div class="portfolio_index_text">
+                <h2>Paysage</h2>
+            </div>
+        </a>
     </div>
 
-    <div id="portfolio_index_img">
-        <div id="portfolio_index_text">
-            <h2>Photographie</h2>
-            <p>Description</p>
-        </div>
-    </div>
-
-    <div id="portfolio_index_img">
-        <div id="portfolio_index_text">
-            <h1>Photographie</h1>
-            <p>Description</p>
-        </div>
-    </div>
-</div>
 </section>
 
 <section id="application_index">
-<div id="application_index_img"></div>
+    <div id="application_index_img">
+        <img src="Contents/Illustration/application-index.png">
+    </div>
 
     <div id="application_index_text">
         <h2>L'application</h2>
@@ -72,7 +73,7 @@
 <section id="contact_index">
     <div id="contact_index_text">
         <h2>Contactez-moi!</h2>
-        <input type="button" value="Lien page contact" onclick="javascript:location.href='Contact'">
+        <input class="button" type="button" value="Lien page contact" onclick="javascript:location.href='Contact'">
     </div>
     <div id="contact_index_newsletter">
         <h2>Newsletter</h2>
