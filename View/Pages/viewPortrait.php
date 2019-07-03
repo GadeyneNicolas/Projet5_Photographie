@@ -14,46 +14,23 @@
     
     <div id="portfolio_page_global">
 
-    <div class="portfolio_page_img">
-        <div class="portfolio_page_text">
-            <h2>Photographie</h2>
-            <p>Description</p>
-        </div>
-    </div>
+    <?php foreach ($picturesPortrait as $picturesPortraitAffichage): ?>
+    
+        <div class="portfolio_page_img">
 
-    <div class="portfolio_page_img">
-        <div class="portfolio_page_text">
-            <h2>Photographie</h2>
-            <p>Description</p>
-        </div>
-    </div>
+            <?php echo "<img src='".$picturesPortraitAffichage['link']."' alt='image de larticle'>" ?>
 
-    <div class="portfolio_page_img">
-        <div class="portfolio_page_text">
-            <h2>Photographie</h2>
-            <p>Description</p>
-        </div>
-    </div>
+    
+            <div class="portfolio_page_text">
+                    <h2><?= $picturesPortraitAffichage['title'] ?></h2>
+            </div>
 
-    <div class="portfolio_page_img">
-        <div class="portfolio_page_text">
-            <h2>Photographie</h2>
-            <p>Description</p>
         </div>
-    </div>
 
-    <div class="portfolio_page_img">
-        <div class="portfolio_page_text">
-            <h2>Photographie</h2>
-            <p>Description</p>
-        </div>
-    </div>
 
-    <div class="portfolio_page_img">
-        <div class="portfolio_page_text">
-            <h2>Photographie</h2>
-            <p>Description</p>
-        </div>
+        
+    <?php endforeach; ?>
+
     </div>
 
 </section>

@@ -9,50 +9,28 @@
 
 <section id="portfolio_page">
 
-<input class="button" type="button" value="Lien page portfolio" onclick="javascript:location.href='Portfolio'">
-
+</div>
+    <input  class="button" type="button" value="Lien page portfolio" onclick="javascript:location.href='Portfolio'">
+    
     <div id="portfolio_page_global">
 
-    <div class="portfolio_page_img">
-        <div class="portfolio_page_text">
-            <h2>Photographie</h2>
-            <p>Description</p>
-        </div>
-    </div>
+    <?php foreach ($picturesAnimal as $picturesAnimalAffichage): ?>
+    
+        <div class="portfolio_page_img">
 
-    <div class="portfolio_page_img">
-        <div class="portfolio_page_text">
-            <h2>Photographie</h2>
-            <p>Description</p>
-        </div>
-    </div>
+            <?php echo "<img src='".$picturesAnimalAffichage['link']."' alt='image de larticle'>" ?>
 
-    <div class="portfolio_page_img">
-        <div class="portfolio_page_text">
-            <h2>Photographie</h2>
-            <p>Description</p>
-        </div>
-    </div>
+    
+            <div class="portfolio_page_text">
+                    <h2><?= $picturesAnimalAffichage['title'] ?></h2>
+            </div>
 
-    <div class="portfolio_page_img">
-        <div class="portfolio_page_text">
-            <h2>Photographie</h2>
-            <p>Description</p>
         </div>
-    </div>
 
-    <div class="portfolio_page_img">
-        <div class="portfolio_page_text">
-            <h2>Photographie</h2>
-            <p>Description</p>
-        </div>
-    </div>
 
-    <div class="portfolio_page_img">
-        <div class="portfolio_page_text">
-            <h2>Photographie</h2>
-            <p>Description</p>
-        </div>
+        
+    <?php endforeach; ?>
+
     </div>
 
 </section>

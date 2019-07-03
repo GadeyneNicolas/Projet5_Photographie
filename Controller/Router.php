@@ -50,13 +50,29 @@ class Router {
                 }  else if (($_GET['action'] == 'Admin')) {
                     $this->ctrlPage->admin();
                 }  else if (($_GET['action'] == 'AddPictures')) {
-                    $this->ctrlPage->addPictures();
-                }  else if ($_GET['action'] == 'AddNewPics') {
-                    $titlePics = $this->getParameter($_POST, 'title');
-                    $contentPics = $this->getParameter($_POST, 'content');
-                    $this->ctrlPictures->addNewPics($titlePics, $contentPics);
-                }
-                 else {
+                    $this->ctrlPage->addPictures();           
+                } else if ($_GET['action'] == 'AddNewPicsPortrait') {
+                    $titlePicsPortrait = $this->getParameter($_POST, 'title');
+                    $contentPicsPortrait = $this->getParameter($_POST, 'content');
+                    $this->ctrlPictures->AddNewPicsPortrait($titlePicsPortrait, $contentPicsPortrait);
+                }   else if ($_GET['action'] == 'DeletePicsPortrait') {
+                    $idPicsPortrait = $this->getParameter($_GET, 'id');
+                    $this->ctrlPictures->DeletePicsPortrait($idPicsPortrait); 
+                } else if ($_GET['action'] == 'AddNewPicsAnimal') {
+                    $titlePicsAnimal = $this->getParameter($_POST, 'title');
+                    $contentPicsAnimal = $this->getParameter($_POST, 'content');
+                    $this->ctrlPictures->AddNewPicsAnimal($titlePicsAnimal, $contentPicsAnimal);
+                }   else if ($_GET['action'] == 'DeletePicsAnimal') {
+                    $idPicsAnimal = $this->getParameter($_GET, 'id');
+                    $this->ctrlPictures->DeletePicsAnimal($idPicsAnimal); 
+                }   else if ($_GET['action'] == 'AddNewPicsLandscape') {
+                    $titlePicsLandscape = $this->getParameter($_POST, 'title');
+                    $contentPicsLandscape = $this->getParameter($_POST, 'content');
+                    $this->ctrlPictures->AddNewPicsLandscape($titlePicsLandscape, $contentPicsLandscape);
+                } else if ($_GET['action'] == 'DeletePicsLandscape') {
+                    $idPicsLandscape = $this->getParameter($_GET, 'id');
+                    $this->ctrlPictures->DeletePicsLandscape($idPicsLandscape); 
+                }else {
                     throw new Exception("Action non valide");
                     $this->ctrlPage->error();
                 }
@@ -85,3 +101,4 @@ class Router {
     }
 
 }
+

@@ -60,22 +60,24 @@
 </section>
 
 <section id="application_index">
-    <div id="application_index_img">
-        <img src="Contents/Illustration/application-index.png">
-    </div>
-
     <div id="application_index_text">
         <h2>L'application</h2>
         <p>Description</p>
     </div>
+
+    <div id="application_index_img">
+        <img src="Contents/Illustration/application-index.png">
+    </div>
 </section>
 
 <section id="contact_index">
+    <div id="contact_index_img">
+    <img src="Contents/Illustration/contact-index.png">
+    </div>
+
     <div id="contact_index_text">
         <h2>Contactez-moi!</h2>
+        <p>Description</p>
         <input class="button" type="button" value="Lien page contact" onclick="javascript:location.href='Contact'">
-    </div>
-    <div id="contact_index_newsletter">
-        <h2>Newsletter</h2>
     </div>
 </section>

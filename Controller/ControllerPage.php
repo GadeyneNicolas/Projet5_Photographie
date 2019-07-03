@@ -28,18 +28,21 @@ class ControllerPage {
     }
 
     public function portrait() {
+        $picturesPortrait =  $this->pictures->getPicsBDDPortrait();
         $view = new View("Portrait");
-        $view->generate([]);
+        $view->generate(array('picturesPortrait' => $picturesPortrait));
     }
 
     public function animal() {
+        $picturesAnimal =  $this->pictures->getPicsBDDAnimal();
         $view = new View("Animal");
-        $view->generate([]);
+        $view->generate(array('picturesAnimal' => $picturesAnimal));
     }
 
     public function landscape() {
+        $picturesLandscape =  $this->pictures->getPicsBDDLandscape();
         $view = new View("Landscape");
-        $view->generate([]);
+        $view->generate(array('picturesLandscape' => $picturesLandscape));
     }
 
     public function application() {
@@ -63,8 +66,11 @@ class ControllerPage {
     }
 
     public function admin() {
+        $picturesPortrait =  $this->pictures->getPicsBDDPortrait();
+        $picturesAnimal =  $this->pictures->getPicsBDDAnimal();
+        $picturesLandscape =  $this->pictures->getPicsBDDLandscape();
         $view = new View("Admin");
-        $view->generate([]);
+        $view->generate(array('picturesPortrait' => $picturesPortrait, 'picturesAnimal' => $picturesAnimal, 'picturesLandscape' => $picturesLandscape));
     }
 
     public function login() {
