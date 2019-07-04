@@ -479,6 +479,17 @@ table {
     margin: 10px;
 }
 
+#showPortrait {
+    display: none;
+}
+
+#showAnimal {
+    display: none;
+}
+
+#showLandscape {
+    display: none;
+}
 /*  -----------------------
         9- Footer.
     ----------------------- */

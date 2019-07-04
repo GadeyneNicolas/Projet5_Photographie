@@ -26,14 +26,14 @@
     
         <form method="post" action="index.php?action=Mail" enctype="multipart/form-data">
 
-                <label for="title">Pseudo :</label>
-                <input type="text" id="title" name="title" placeholder="Titre" required>
+                <label for="pseudo">Pseudo :</label>
+                <input type="text" id="pseudo" name="pseudo" placeholder="Pseudo" required>
 
                 <label for="email">Votre adresse E-mail :</label>
-                <input type="email" id="email" name="email" placeholder="email" required>
+                <input type="email" id="email" name="email" placeholder="Email" required>
 
                 <label for="content">Votre message :</label>
-                <textarea type="text" id="content" name="content" placeholder="Votre contenu" required ></textarea>
+                <textarea type="text" id="content" name="content" placeholder="Votre message" required ></textarea>
             
                 <input class="button" type="submit" id="bouton_contact" value="Ajouter">
             

@@ -7,6 +7,16 @@ if (isset($_SESSION['pseudo']))
 
 <?php $this->title = "Mon Blog - Ajouter une photo !"; ?>
 
+<input class="button" type="button" value="Portrait" onclick="javascript:showPortrait()">
+
+
+<input class="button" type="button" value="Animalier" onclick="javascript:showAnimal()">
+
+
+<input class="button" type="button" value="Paysage" onclick="javascript:showLandscape()">
+
+<div id="showPortrait">
+
 <section id="add_pictures">
 <h2>Portrait</h2>
     <div id="add_pictures_text">
@@ -23,13 +33,20 @@ if (isset($_SESSION['pseudo']))
                 <label for="image">Image :</label>
                 <input type="file" id="image" name="image" placeholder="image" required>
             </div>
-
+            <div>
+                <label for="content">Contenu :</label>
+                <textarea type="text" id="content" name="content" placeholder="Votre contenu" ></textarea>
+            </div>
             <div>
                 <input class="button" type="submit" id="bouton_contact" value="Ajouter">
             </div>
         </form>
     </div>
 </section>
+
+</div>
+
+<div id="showAnimal">
 
 <section id="add_pictures">
 <h2>Animalier</h2>
@@ -59,6 +76,10 @@ if (isset($_SESSION['pseudo']))
     </div>
 </section>
 
+</div>
+
+<div id="showLandscape">
+
 <section id="add_pictures">
 <h2>Paysage</h2>
     <div id="add_pictures_text">
@@ -87,8 +108,34 @@ if (isset($_SESSION['pseudo']))
     </div>
 </section>
 
+</div>
+
 <?php
 } else {
     header('Location: LoginError');
 }
 ?>
+
+<script>
+
+function showPortrait()
+{
+    document.getElementById(`showPortrait`).style.display = `block`;
+    document.getElementById(`showLandscape`).style.display = `none`;
+    document.getElementById(`showAnimal`).style.display = `none`;
+}
+
+function showAnimal()
+{
+    document.getElementById(`showAnimal`).style.display = `block`;
+    document.getElementById(`showLandscape`).style.display = `none`;
+    document.getElementById(`showPortrait`).style.display = `none`;
+}
+
+function showLandscape()
+{
+    document.getElementById(`showLandscape`).style.display = `block`;
+    document.getElementById(`showPortrait`).style.display = `none`;
+    document.getElementById(`showAnimal`).style.display = `none`;
+}
+</script>

@@ -3,15 +3,21 @@
 require_once 'Controller/ControllerPage.php';
 require_once 'Controller/ControllerAdmin.php';
 require_once 'Controller/ControllerPictures.php';
+require_once 'Controller/ControllerMail.php';
 require_once 'View/View.php';
+
 class Router {
 
     private $ctrlPage;
+    private $ctrlAdmin;
+    private $ctrlPictures;
+    private $ctrlMail;
 
     public function __construct() {
         $this->ctrlPage = new ControllerPage();
         $this->ctrlAdmin = new ControllerAdmin();
         $this->ctrlPictures = new ControllerPictures();
+        $this->ctrlMail = new ControllerMail();
     }
 
     // Route une requête entrante : exécution l'action associée
@@ -72,7 +78,12 @@ class Router {
                 } else if ($_GET['action'] == 'DeletePicsLandscape') {
                     $idPicsLandscape = $this->getParameter($_GET, 'id');
                     $this->ctrlPictures->DeletePicsLandscape($idPicsLandscape); 
-                }else {
+                }  else if ($_GET['action'] == 'Mail') {
+                    $pseudoContact = $this->getParameter($_POST, 'pseudo');
+                    $emailContact = $this->getParameter($_POST, 'email');
+                    $contentContact = $this->getParameter($_POST, 'content');
+                    $this->ctrlMail->mailto($pseudoContact, $emailContact, $contentContact); 
+                } else {
                     throw new Exception("Action non valide");
                     $this->ctrlPage->error();
                 }

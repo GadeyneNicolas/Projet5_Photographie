@@ -1,17 +1,24 @@
 <?php
-    if(isset($_POST['message'])){
-        $entete  = 'MIME-Version: 1.0' . "\r\n";
-        $entete .= 'Content-type: text/html; charset=utf-8' . "\r\n";
-        $entete .= 'From: ' . $_POST['email'] . "\r\n";
+
+require_once 'View/View.php';
+
+class ControllerMail {
+    
+    public function mailto($pseudoContact, $emailContact, $contentContact)
+    {
+        $header  = 'MIME-Version: 1.0' . "\r\n";
+        $header .= 'Content-type: text/html; charset=utf-8' . "\r\n";
+        $header .= 'From: ' . $emailContact . "\r\n";
 
         $message = '<h1>Message envoyé depuis la page Contact de monsite.fr</h1>
-        <p><b>Nom : </b>' . $_POST['nom'] . '<br>
-        <b>Email : </b>' . $_POST['email'] . '<br>
-        <b>Message : </b>' . $_POST['message'] . '</p>';
+        <p><b>Nom : </b>' . $pseudoContact . '<br>
+        <b>Email : </b>' . $emailContact . '<br>
+        <b>Message : </b>' . $contentContact . '</p>';
 
-        $retour = mail('destinataire@free.fr', 'Envoi depuis page Contact', $message, $entete);
-        if($retour) {
+        $return = mail('ngadeyne@gmail.com', 'Envoi depuis page Contact', $message, $header);
+        if($return) {
             echo '<p>Votre message a bien été envoyé.</p>';
         }
     }
-    ?>
+}    
+?>
