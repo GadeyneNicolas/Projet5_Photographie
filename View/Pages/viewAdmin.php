@@ -88,6 +88,33 @@ if (isset($_SESSION['pseudo']))
         </tr>
     
     <?php endforeach; ?>
+
+</table>
+
+<h2>Comentaires</h2>
+<table>
+        <tr>
+            <th>Id</th>
+            <th>Auteur</th>
+            <th>Email</th>
+            <th>Contenu</th>
+            <th>Signalement</th>
+            <th>Supprimer</th>
+        </tr>
+
+        <?php foreach ($comments as $commentsAffichage): ?>
+            
+            <tr>
+                    <td><?= $commentsAffichage['id'] ?></td>
+                    <td><?= $commentsAffichage['pseudo']  ?></td>
+                    <td><?= $commentsAffichage['email'] ?></td>
+                    <td><?= $commentsAffichage['content'] ?></td>
+                    <td> Signalement </td>
+                    <?php echo "<td><a href='index.php?action=DeleteComments&id=".$commentsAffichage['id']."'>Supprimer</a></td>"; ?>
+            </tr>
+    
+        <?php endforeach; ?>
+
 </table>
 </section>
 

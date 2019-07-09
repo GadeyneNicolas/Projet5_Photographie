@@ -2,13 +2,16 @@
 
 require_once 'View/View.php';
 require_once 'Model/Pictures.php';
+require_once 'Model/Comments.php';
 
 class ControllerPage {
 
     private $pictures;
+    private $comments;
 
     public function __construct() {
         $this->pictures = new Pictures();
+        $this->comments = new Comments();
     }
 
 // Affiche la liste de tous les billets du blog
@@ -46,8 +49,9 @@ class ControllerPage {
     }
 
     public function application() {
+        $comments =  $this->comments->getCommentsBDD();
         $view = new View("Application");
-        $view->generate([]);
+        $view->generate(array('comments' => $comments));
     }
 
     public function contact() {
@@ -69,8 +73,9 @@ class ControllerPage {
         $picturesPortrait =  $this->pictures->getPicsBDDPortrait();
         $picturesAnimal =  $this->pictures->getPicsBDDAnimal();
         $picturesLandscape =  $this->pictures->getPicsBDDLandscape();
+        $comments =  $this->comments->getCommentsBDD();
         $view = new View("Admin");
-        $view->generate(array('picturesPortrait' => $picturesPortrait, 'picturesAnimal' => $picturesAnimal, 'picturesLandscape' => $picturesLandscape));
+        $view->generate(array('comments' => $comments, 'picturesPortrait' => $picturesPortrait, 'picturesAnimal' => $picturesAnimal, 'picturesLandscape' => $picturesLandscape));
     }
 
     public function login() {
