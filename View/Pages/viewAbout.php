@@ -6,7 +6,7 @@
     <img src="Contents/Illustration/banner-about.jpg">
     </div>
 </section>
-</section>
+
 
 <section id="about">
 

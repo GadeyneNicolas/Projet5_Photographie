@@ -10,9 +10,12 @@
 
 <div id="application">
 
-    <div id="chatbot">
+    <div id="application_text">
     <h2>Chatbot</h2>
-    <p>Description</p>
+    <p>Je vous propose de découvrir un Chatbot intelligent sur le thème de la photographie. Celui-ci 
+        peut comprendre vos questions et essayer d'y répondre le plus simplement possible grâce à
+        des connaissances enregistrés dans sa base de donnée.
+    </p>
     </div>
 
     <section>  
@@ -26,13 +29,15 @@
 
     <section id="commentsGlobal">
 
+    <h2>Espace commentaire.</h2>
+    <p>N'hésitez pas à donner votre avis sur le Chatbot.</p>
+
     <?php foreach ($comments as $commentsAffichage): ?>
     
     <div class="comments">
-
-        <p><?= $commentsAffichage['id'] ?></p>
-        <p><?= $commentsAffichage['pseudo'] ?></p>
-        <p><?= $commentsAffichage['email'] ?></p>
+        
+        <p><strong> Pseudo : </strong> <?= $commentsAffichage['pseudo'] ?> </p>
+        <p><strong> Commentaire :</strong></p>
         <p><?= $commentsAffichage['content'] ?></p>
 
     </div>
@@ -41,24 +46,23 @@
 
     </section>
 
+    <section>
+     <br>   
+    <h2>Postez votre commentaire.</h2>
     <form method="post" action="index.php?action=AddNewComments" enctype="multipart/form-data">
-        <div>
+        
             <label for="pseudo">Titre :</label>
             <input type="text" id="pseudo" name="pseudo" placeholder="Pseudo" required>
-        </div>
-
-        <div>
-            <label for="email">Titre :</label>
+       
+            <label for="email">Email :</label>
             <input type="email" id="email" name="email" placeholder="Email" required>
-        </div>
-
-         <div>
+    
             <label for="content">Contenu :</label>
             <textarea type="text" id="content" name="content" placeholder="Votre contenu" ></textarea>
-        </div>
-        <div>
+     
             <input class="button" type="submit" id="bouton_contact" value="Ajouter">
-        </div>
     </form>
+
+    </section>
 
 </div>

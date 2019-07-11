@@ -6,13 +6,12 @@
 
         <title><?= $title ?></title>
     </head>
-    
     <body>
         <div id="global">
 
             <header>
                 <div id="header_title"> 
-                    <a href="Home"><h1 id="titreBlog">Mon Blog</h1></a>
+                    <a href="Home"><h1>NG - Photographie</h1></a>
                 </div>
                 <nav>
                     <ol>

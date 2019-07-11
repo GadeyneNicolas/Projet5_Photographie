@@ -17,8 +17,12 @@
     
     <div id="about_index_text">
             <h2>Le photographe</h2>
-            <p>Description</p>
-            <input class="button" type="button" value="Lien page About" onclick="javascript:location.href='About'">
+            <p>Développeur web de métier, photographe amateur passioné, je vous propose ici un site reliant
+            mes deux passions. Vous avez ici la possibilité de voir mon travail en tant que photographe, 
+            mais également de parler avec un Chatbot intelligent qui répond à vos questions à propos de la
+            photographie.
+            </p>
+            <input class="button" type="button" value="En savoir plus" onclick="javascript:location.href='About'">
     </div>
 
 </section>
@@ -62,7 +66,11 @@
 <section id="application_index">
     <div id="application_index_text">
         <h2>L'application</h2>
-        <p>Description</p>
+        <p>Je vous propose de découvrir un Chatbot intelligent sur le thème de la photographie. Celui-ci 
+        peut comprendre vos questions et essayer d'y répondre le plus simplement possible grâce à
+        des connaissances enregistrés dans sa base de donnée.
+        </p>
+        <input class="button" type="button" value="L'application" onclick="javascript:location.href='Application'">
     </div>
 
     <div id="application_index_img">
@@ -77,7 +85,8 @@
 
     <div id="contact_index_text">
         <h2>Contactez-moi!</h2>
-        <p>Description</p>
-        <input class="button" type="button" value="Lien page contact" onclick="javascript:location.href='Contact'">
+        <p>Vous souhaitez me contacter? En savoir plus sur mon travail de développeur ou de photographe?
+        N'hésitez surtout pas, je tacherai de vous répondre rapidement.</p>
+        <input class="button" type="button" value="Contactez-moi" onclick="javascript:location.href='Contact'">
     </div>
 </section>

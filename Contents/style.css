@@ -37,6 +37,7 @@ body {
     padding: 4px 8px 4px 8px;
     background:  white;
     box-shadow: 0px 5px 10px #ababab;
+    margin-top: 30px;
 }
 
 .content {
@@ -46,6 +47,10 @@ body {
 a {
     text-decoration: none;
     color: #8c8c8c !important;
+}
+
+p {
+    text-align: initial;
 }
 
 a:hover {
@@ -352,7 +357,14 @@ header nav a:focus {
     justify-content: center;
     align-items: center;
 }
+
+#application_text {
+    width: 50vw;
+    margin-bottom: 100px;
+}
+
 #commentsGlobal {
+    margin-top: 100px;
     box-shadow: 0px 5px 15px #ababab;
     padding: 20px;
     width: 50%;
@@ -368,10 +380,30 @@ header nav a:focus {
     margin: 15px;
 }
 
+.comments p {
+    margin-left: 50px;
+}
+
 #application form {
-    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40vw;
+    margin-top: 50px;
     padding: 20px;
     box-shadow: 0px 5px 15px #ababab;
+}
+
+#application input {
+    width: 20vw;
+}
+
+#application input:last-child {
+    width: 8vw;
+}
+
+#application textarea {
+    width: 20vw;
 }
 
 /*  -----------------------
@@ -390,6 +422,10 @@ header nav a:focus {
     width: 450px;
     height: 450px;
     box-shadow: 0px 5px 15px #ababab;
+}
+
+#contact_infos p {
+    text-align: center;
 }
 
 #contact_form {
@@ -496,7 +532,7 @@ table {
     align-items: center;
     justify-content: center;
     text-align: center;
-    margin-top: 200px;
+    margin-top: 100px;
     padding: 20px;
     box-shadow: 0px 5px 15px #ababab;
     margin-left: 25vw;
@@ -511,6 +547,11 @@ table {
 }
 
 #add_pictures input {
+    padding: 5px;
+    margin: 10px;
+}
+
+#add_pictures textarea {
     padding: 5px;
     margin: 10px;
 }
@@ -546,3 +587,4 @@ footer a {
     font-size: 1em;
     font-weight: bold;
 }
+

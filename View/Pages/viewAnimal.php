@@ -9,7 +9,7 @@
 
 <section id="portfolio_page">
 
-</div>
+
     <input  class="button" type="button" value="Lien page portfolio" onclick="javascript:location.href='Portfolio'">
     
     <div id="portfolio_page_global">

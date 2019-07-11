@@ -7,13 +7,12 @@ if (isset($_SESSION['pseudo']))
 <?php $this->title = "Mon Blog - Admin !"; ?>
 
 <section id="admin">
-<p>Veuillez entrer le mot de passe pour accéder au panneau admin :</p>
-<p>Veuillez entrer le mot de passe pour accéder au panneau admin :</p>
-<p>Veuillez entrer le mot de passe pour accéder au panneau admin :</p>
-<p>Veuillez entrer le mot de passe pour accéder au panneau admin :</p>
-<p>Veuillez entrer le mot de passe pour accéder au panneau admin :</p>
+<h1>Bienvenue sur l'espace administration.</h1>
+<p>Vous souhaitez :</p>
+<a href="Disconnection">Se déconnecter</a>
+<p>Ou alors :</p>
 <a href="AddPictures">Ajouter une photo</a>
-<a href="Disconnection">Déconnexion</a>
+<p>Vous pouvez également controller les différentes photos ou les commentaires.</p>
 
 <h2>Portrait</h2>
 <table>
@@ -21,7 +20,6 @@ if (isset($_SESSION['pseudo']))
             <th>Id</th>
             <th>Auteur</th>
             <th>Titre</th>
-            <th>Contenu</th>
             <th>Image</th>
             <th>Supprimer</th>
 
@@ -32,7 +30,6 @@ if (isset($_SESSION['pseudo']))
                 <td><?= $picturesPortraitAffichage['id'] ?></td>
                 <td>GADEYNE Nicolas</td>
                 <td><?= $picturesPortraitAffichage['title'] ?></td>
-                <td><?= $picturesPortraitAffichage['content'] ?></td>
                 <td><?= $picturesPortraitAffichage['link'] ?></td>
                 <?php echo "<td><a href='index.php?action=DeletePicsPortrait&id=".$picturesPortraitAffichage['id']."'>Supprimer</a></td>"; ?>
         </tr>
@@ -46,7 +43,6 @@ if (isset($_SESSION['pseudo']))
             <th>Id</th>
             <th>Auteur</th>
             <th>Titre</th>
-            <th>Contenu</th>
             <th>Image</th>
             <th>Supprimer</th>
 
@@ -57,7 +53,6 @@ if (isset($_SESSION['pseudo']))
                 <td><?= $picturesAnimalAffichage['id'] ?></td>
                 <td>GADEYNE Nicolas</td>
                 <td><?= $picturesAnimalAffichage['title'] ?></td>
-                <td><?= $picturesAnimalAffichage['content'] ?></td>
                 <td><?= $picturesAnimalAffichage['link'] ?></td>
                 <?php echo "<td><a href='index.php?action=DeletePicsAnimal&id=".$picturesAnimalAffichage['id']."'>Supprimer</a></td>"; ?>
         </tr>
@@ -71,7 +66,6 @@ if (isset($_SESSION['pseudo']))
             <th>Id</th>
             <th>Auteur</th>
             <th>Titre</th>
-            <th>Contenu</th>
             <th>Image</th>
             <th>Supprimer</th>
 
@@ -82,7 +76,6 @@ if (isset($_SESSION['pseudo']))
                 <td><?= $picturesLandscapeAffichage['id'] ?></td>
                 <td>GADEYNE Nicolas</td>
                 <td><?= $picturesLandscapeAffichage['title'] ?></td>
-                <td><?= $picturesLandscapeAffichage['content'] ?></td>
                 <td><?= $picturesLandscapeAffichage['link'] ?></td>
                 <?php echo "<td><a href='index.php?action=DeletePicsLandscape&id=".$picturesLandscapeAffichage['id']."'>Supprimer</a></td>"; ?>
         </tr>

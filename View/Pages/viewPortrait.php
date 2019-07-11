@@ -3,13 +3,13 @@
 <section class="banner_page">
 
     <div class="banner_page_img">
-    <img src="Contents/Illustration/banner-portfolio.jpg">
+        <img src="Contents/Illustration/banner-portfolio.jpg">
     </div>
+
 </section>
 
 <section id="portfolio_page">
 
-</div>
     <input  class="button" type="button" value="Lien page portfolio" onclick="javascript:location.href='Portfolio'">
     
     <div id="portfolio_page_global">
