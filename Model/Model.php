@@ -26,4 +26,6 @@ abstract class Model {
         return $this->bdd;
     }
 
+   
+
 }

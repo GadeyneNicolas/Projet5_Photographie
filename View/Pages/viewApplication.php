@@ -18,11 +18,9 @@
     </p>
     </div>
 
-    <section>  
+    <section id="chatbot">  
         <iframe
             allow="microphone;"
-            width="650"
-            height="830"
             src="https://console.dialogflow.com/api-client/demo/embedded/2a0512b4-552d-4476-9f8b-1b7735e76040">
         </iframe>        
     </section>
