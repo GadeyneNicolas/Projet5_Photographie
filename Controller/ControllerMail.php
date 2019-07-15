@@ -17,7 +17,7 @@ class ControllerMail {
 
         $return = mail('ngadeyne@gmail.com', 'Envoi depuis page Contact', $message, $header);
         if($return) {
-            echo '<p>Votre message a bien été envoyé.</p>';
+            header('location: Home');
         }
     }
 }    

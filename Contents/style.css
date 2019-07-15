@@ -159,8 +159,7 @@ header nav a:focus {
 
 #about_index_img {
     margin-top: 60px;
-    height: 450px;
-    width: 450px;
+    width: 40vw;
     background: white;
     box-shadow: 0px 5px 15px #ababab;
 }
@@ -171,7 +170,7 @@ header nav a:focus {
 }
 
 #about_index_text {
-    width: 450px;
+    width: 30vw;
     margin-left: 100px;
 }
 
@@ -184,8 +183,7 @@ header nav a:focus {
 }
 
 .portfolio_index_img {
-    height: 300px;
-    width: 300px;
+    width: 25vw;
     margin: 25px;
     background: white;
     box-shadow: 0px 5px 15px #ababab;
@@ -200,7 +198,7 @@ header nav a:focus {
 .portfolio_index_text {
     background:  #b49688;
     box-shadow: 0px 5px 10px #b49688;
-    width: 300px;
+    width: 25vw;
     color: white;
     position: absolute;
     top: 70%;
@@ -224,8 +222,7 @@ header nav a:focus {
     margin-left: 100px;
     margin-top: 60px;
     margin-bottom: 60px;
-    height: 450px;
-    width: 450px;
+    width: 40vw;
     background: white;
     box-shadow: 0px 5px 15px #ababab;
 }
@@ -236,7 +233,7 @@ header nav a:focus {
 }
 
 #application_index_text {
-    width: 450px;
+    width: 30vw;
 }
 
 #contact_index {
@@ -250,8 +247,7 @@ header nav a:focus {
 #contact_index_img {
     margin-top: 60px;
     margin-bottom: 60px;
-    height: 450px;
-    width: 450px;
+    width: 40vw;
     background: white;
     box-shadow: 0px 5px 15px #ababab;
 }
@@ -262,7 +258,7 @@ header nav a:focus {
 }
 
 #contact_index_text {
-    width: 450px;
+    width: 30vw;
     margin-left: 100px;
 }
 
@@ -310,8 +306,7 @@ header nav a:focus {
 }
 
 .portfolio_presentation_img {
-    height: 450px;
-    width: 450px;
+    width: 40vw;
     background: white;
     box-shadow: 0px 5px 15px #ababab;
 }
@@ -321,7 +316,7 @@ header nav a:focus {
     margin-top: 15%;
 }
 .portfolio_presentation_text {
-    width: 450px;
+    width: 35vw;
     margin-left: 100px;
 }
 
@@ -375,7 +370,7 @@ header nav a:focus {
     height: 80vw;
 }
 
-#commentsGlobal {
+#comments_global {
     margin-top: 100px;
     box-shadow: 0px 5px 15px #ababab;
     padding: 20px;
@@ -431,8 +426,7 @@ header nav a:focus {
 #contact_infos {
     margin-top: 60px;
     margin-bottom: 60px;
-    width: 450px;
-    height: 450px;
+    width: 40vw;
     box-shadow: 0px 5px 15px #ababab;
 }
 
@@ -443,8 +437,7 @@ header nav a:focus {
 #contact_form {
     margin-top: 60px;
     margin-bottom: 60px;
-    width: 450px;
-    height: 450px;
+    width: 40vw;
     margin-left: 100px;
     box-shadow: 0px 5px 15px #ababab;
 }
@@ -583,7 +576,6 @@ footer {
     background: #f2f2f2;
     border-top: 1px solid grey;
     margin-bottom: -10px;
-    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -600,7 +592,7 @@ footer a {
     font-weight: bold;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1024px) {
 
     header {
         flex-direction: column;
@@ -700,13 +692,27 @@ footer a {
         flex-direction: column;
     }
 
+    #about_index_img {
+        margin: 0;
+        width: 60vw;
+    }
+
     #about_index_text {
         margin: 0;
+        width: 60vw;
     }
 
     #portfolio_index_global {
         flex-direction: column;
         align-items: center;
+    }
+
+    .portfolio_index_img {
+        width: 60vw;
+    }
+
+    .portfolio_index_text {
+        width: 60vw;
     }
 
     #application_index {
@@ -715,29 +721,72 @@ footer a {
 
     #application_index_img {
         margin-left: 0;
+        width: 60vw;
+    }
+
+    #application_index_text {
+        width: 60vw;
+        margin-bottom: 10%;
     }
 
     #contact_index {
         flex-direction: column;
     }
 
+    #contact_index_img {
+        width: 60vw;
+    }
+
     #contact_index_text {
         margin-left: 0;
+        width: 60vw;
     }
 
     .portfolio_presentation {
         flex-direction: column;
     }
+    
+    .portfolio_presentation_img {
+        margin-left: 0;
+        width: 60vw;
+    }
 
     .portfolio_presentation_text {
         margin-left: 0;
+        width: 60vw;
     }
 
     #contact {
         flex-direction: column;
     }
-
+    
+    #contact_infos {
+        margin-left: 0;
+        width: 60vw;
+    }
+    
     #contact_form {
         margin-left: 0;
+        width: 60vw;
+    }
+
+    #comments_global {
+        width: 60vw;
+    }
+
+    .comments {
+        width: 90%;
+    }
+
+    #comments_form {
+        width: 60vw;
+    }
+
+    #comments_form input {
+        width: 90% !important;
+    }
+
+    #comments_form textarea {
+        width: 90%;
     }
 }

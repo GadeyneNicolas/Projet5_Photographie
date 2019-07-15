@@ -23,11 +23,9 @@ public function addNewPicsPortrait($titlePicsPortrait, $contentPicsPortrait) {
     //2. substr(chaine,1) ignore le premier caractère de chaine.
     //3. strtolower met l'extension en minuscules.
     $extension_upload = strtolower(  substr(  strrchr($_FILES['image']['name'], '.')  ,1)  );
-    if ( in_array($extension_upload,$extensions_valides) ) echo "Extension correcte";
     
     $nomPortrait = "Contents/Pictures/{$titlePicsPortrait}.{$extension_upload}";
     $resultat = move_uploaded_file($_FILES['image']['tmp_name'],$nomPortrait);
-    if ($resultat) echo "Transfert réussi";
     $linkPortrait = $nomPortrait;
   
     // // Save Pictures
@@ -55,11 +53,9 @@ public function addNewPicsAnimal($titlePicsAnimal, $contentPicsAnimal) {
     //2. substr(chaine,1) ignore le premier caractère de chaine.
     //3. strtolower met l'extension en minuscules.
     $extension_upload = strtolower(  substr(  strrchr($_FILES['image']['name'], '.')  ,1)  );
-    if ( in_array($extension_upload,$extensions_valides) ) echo "Extension correcte";
     
     $nomAnimal = "Contents/Pictures/{$titlePicsAnimal}.{$extension_upload}";
     $resultat = move_uploaded_file($_FILES['image']['tmp_name'],$nomAnimal);
-    if ($resultat) echo "Transfert réussi";
     $linkAnimal = $nomAnimal;
   
     // // Save pictures
@@ -87,11 +83,9 @@ public function addNewPicsLandscape($titlePicsLandscape, $contentPicsLandscape) 
     //2. substr(chaine,1) ignore le premier caractère de chaine.
     //3. strtolower met l'extension en minuscules.
     $extension_upload = strtolower(  substr(  strrchr($_FILES['image']['name'], '.')  ,1)  );
-    if ( in_array($extension_upload,$extensions_valides) ) echo "Extension correcte";
     
     $nomLandscape = "Contents/Pictures/{$titlePicsLandscape}.{$extension_upload}";
     $resultat = move_uploaded_file($_FILES['image']['tmp_name'],$nomLandscape);
-    if ($resultat) echo "Transfert réussi";
     $linkLandscape = $nomLandscape;
   
     // // Sauvegarde du billet

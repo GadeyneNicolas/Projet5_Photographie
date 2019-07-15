@@ -7,6 +7,7 @@ Options +FollowSymlinks
 
 # Activation du module de réécriture d'URL :
 RewriteEngine on
+RewriteBase /PROJET5_PHOTOGRAPHIE/
 
 #--------------------------------------------------
 # Règles de réécriture d'URL :
