@@ -40,6 +40,8 @@ class Router {
                     $this->ctrlPage->landscape();
                 }   else if (($_GET['action'] == 'Application')) {
                     $this->ctrlPage->application();
+                }    else if (($_GET['action'] == 'Faq')) {
+                    $this->ctrlPage->faq();
                 }   else if (($_GET['action'] == 'Contact')) {
                     $this->ctrlPage->contact();
                 }   else if (($_GET['action'] == 'Confidential')) {

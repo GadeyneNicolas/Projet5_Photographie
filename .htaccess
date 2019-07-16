@@ -34,6 +34,9 @@ RewriteRule ^Portfolio-Landscape$ index.php?action=Landscape [L]
 # Réécriture d l'URL de la page Application.
 RewriteRule ^Application$ index.php?action=Application [L]
 
+# Réécriture d l'URL de la page Application.
+RewriteRule ^Faq$ index.php?action=Faq [L]
+
 # Réécriture d l'URL de la page Contact.
 RewriteRule ^Contact$ index.php?action=Contact [L]
 

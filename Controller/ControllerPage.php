@@ -53,6 +53,11 @@ class ControllerPage {
         $view->generate(array('comments' => $comments));
     }
 
+    public function faq() {
+        $view = new View("Faq");
+        $view->generate([]);
+    }
+
     public function contact() {
         $view = new View("Contact");
         $view->generate([]);

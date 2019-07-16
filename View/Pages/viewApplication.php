@@ -13,6 +13,11 @@
                 peut comprendre vos questions et essayer d'y répondre le plus simplement possible grâce à
                 des connaissances enregistrés dans sa base de donnée.
             </p>
+        <h2>Un problème avec le chatbot?</h2>
+            <p>Si vous n'arrivez pas à faire fonctionner l'application, n'hésitez pas à regarder la FAQ 
+            de celle-ci.
+            </p>
+            <input class="button" type="button" value="Faq" onclick="javascript:location.href='Faq'">
     </div>
 
     <section id="chatbot">  
