@@ -11,13 +11,13 @@ class ControllerMail {
         $header .= 'From: ' . $emailContact . "\r\n";
 
         $message = '<h1>Message envoyé depuis la page Contact de monsite.fr</h1>
-        <p><b>Nom : </b>' . $pseudoContact . '<br>
-        <b>Email : </b>' . $emailContact . '<br>
-        <b>Message : </b>' . $contentContact . '</p>';
+            <p><b>Nom : </b>' . $pseudoContact . '<br>
+            <b>Email : </b>' . $emailContact . '<br>
+            <b>Message : </b>' . $contentContact . '</p>';
 
         $return = mail('ngadeyne@gmail.com', 'Envoi depuis page Contact', $message, $header);
-        if($return) {
-            header('location: Home');
+            if($return) {
+                header('location: Home');
         }
     }
 }    

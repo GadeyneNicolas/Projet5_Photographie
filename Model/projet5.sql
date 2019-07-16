@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  jeu. 11 juil. 2019 à 12:16
+-- Généré le :  mar. 16 juil. 2019 à 06:38
 -- Version du serveur :  5.7.24
 -- Version de PHP :  7.2.14
 
@@ -56,19 +56,14 @@ CREATE TABLE IF NOT EXISTS `t_comments` (
   `COMMENT_MAIL` varchar(255) NOT NULL,
   `COMMENT_CONTENT` text NOT NULL,
   PRIMARY KEY (`COMMENT_ID`)
-) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `t_comments`
 --
 
 INSERT INTO `t_comments` (`COMMENT_ID`, `COMMENT_PSEUDO`, `COMMENT_MAIL`, `COMMENT_CONTENT`) VALUES
-(2, 'hh', 'hh@gmail.com', 'hh'),
-(3, 'test', 'test@gmail.com', 'test\r\n'),
-(4, 'test', 'test@gmail.com', 'tt'),
-(6, 'hh', 'hh@gmail.com', 'hhhhhhhhhhhhhhhhh'),
-(7, 'hh', 'hh@gmail.com', 'J\'adore cet chatbot.'),
-(8, 'Admin', 'hh@gmail.com', 'J\'adore cet chatbot. J\'adore cet chatbot.J\'adore cet chatbot.J\'adore cet chatbot.J\'adore cet chatbot.J\'adore cet chatbot.J\'adore cet chatbot.J\'adore cet chatbot.J\'adore cet chatbot.J\'adore cet chatbot.');
+(11, 'Nico', 'ngadeyne@gmail.com', 'Ceci est un test.');
 
 -- --------------------------------------------------------
 
@@ -83,15 +78,19 @@ CREATE TABLE IF NOT EXISTS `t_pictures_animal` (
   `PIC_ANIMAL_CONTENT` varchar(255) NOT NULL,
   `PIC_ANIMAL_LINK` varchar(255) NOT NULL,
   PRIMARY KEY (`PIC_ANIMAL_ID`)
-) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `t_pictures_animal`
 --
 
 INSERT INTO `t_pictures_animal` (`PIC_ANIMAL_ID`, `PIC_ANIMAL_TITLE`, `PIC_ANIMAL_CONTENT`, `PIC_ANIMAL_LINK`) VALUES
-(4, 'Test', 'tt', 'Contents/Pictures/Test.jpg'),
-(3, 'Testouille', 'hh', 'Contents/Pictures/Testouille.jpg');
+(6, 'Kinder', 'Kinder photo 1.', 'Contents/Pictures/Kinder.jpg'),
+(5, 'Bambou', 'Bambou sur la table.', 'Contents/Pictures/Bambou.jpg'),
+(7, 'Kinder se gratte', 'Kinder qui se gratte', 'Contents/Pictures/Kinder se gratte.jpg'),
+(8, 'Kinder mange', 'Kinder mange.', 'Contents/Pictures/Kinder mange.jpg'),
+(9, 'Neige', 'Neige', 'Contents/Pictures/Neige.jpg'),
+(10, 'Neige bâillement', 'Neige bâillement.', 'Contents/Pictures/Neige bâillement.jpg');
 
 -- --------------------------------------------------------
 
@@ -106,14 +105,15 @@ CREATE TABLE IF NOT EXISTS `t_pictures_landscape` (
   `PIC_LANDSCAPE_CONTENT` varchar(255) NOT NULL,
   `PIC_LANDSCAPE_LINK` varchar(255) NOT NULL,
   PRIMARY KEY (`PIC_LANDSCAPE_ID`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `t_pictures_landscape`
 --
 
 INSERT INTO `t_pictures_landscape` (`PIC_LANDSCAPE_ID`, `PIC_LANDSCAPE_TITLE`, `PIC_LANDSCAPE_CONTENT`, `PIC_LANDSCAPE_LINK`) VALUES
-(2, 'Hello', 'll', 'Contents/Pictures/Hello.jpg');
+(4, 'Lac', 'Lac', 'Contents/Pictures/Lac.jpg'),
+(5, 'Forêt', 'Forêt', 'Contents/Pictures/Foret.jpg');
 
 -- --------------------------------------------------------
 
@@ -128,16 +128,19 @@ CREATE TABLE IF NOT EXISTS `t_pictures_portrait` (
   `PIC_PORTRAIT_CONTENT` varchar(255) NOT NULL,
   `PIC_PORTRAIT_LINK` varchar(255) NOT NULL,
   PRIMARY KEY (`PIC_PORTRAIT_ID`)
-) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=27 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `t_pictures_portrait`
 --
 
 INSERT INTO `t_pictures_portrait` (`PIC_PORTRAIT_ID`, `PIC_PORTRAIT_TITLE`, `PIC_PORTRAIT_CONTENT`, `PIC_PORTRAIT_LINK`) VALUES
-(3, 'Test', 'test', 'Contents/Pictures/Test.jpg'),
-(4, 'Test', 'test', 'Contents/Pictures/Test.jpg'),
-(12, 'test2', 'test145', 'Contents/Pictures/test2.jpg');
+(19, 'Marianne Jardin', 'Marianne au jardin des plantes.', 'Contents/Pictures/Marianne Jardin.jpg'),
+(21, 'Marianne au Zoo', 'Marianne au zoo.', 'Contents/Pictures/Marianne au Zoo.jpg'),
+(22, 'Marianne en fleur', 'Marianne et les fleurs', 'Contents/Pictures/Marianne en fleur.jpg'),
+(23, 'Marianne', 'Marianne portrait', 'Contents/Pictures/Marianne.jpg'),
+(24, 'Marianne et kinder', 'Marianne avec kinder', 'Contents/Pictures/Marianne et kinder.jpg'),
+(25, 'Amour entre Marianne et Kinder', 'Marianne et son lapin', 'Contents/Pictures/Amour entre Marianne et Kinder.jpg');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

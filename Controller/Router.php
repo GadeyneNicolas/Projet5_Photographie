@@ -98,6 +98,7 @@ class Router {
                     throw new Exception("Action non valide");
                     $this->ctrlPage->error();
                 }
+                                
             } else {  // aucune action définie : affichage de l'accueil
                 $this->ctrlPage->home();
             }

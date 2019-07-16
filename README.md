@@ -55,3 +55,5 @@ BDD :
     - La connexion à la base de donnée se trouve dans le fichier modele.php placé dans le dossier Modele.
     - La connexion se fait actuellement sur un serveur local.
     - Afin de connecter la BDD à un BDD en ligne, il vous suffit de ces données ci : 'mysql:host=hostdelaBDD;dbname=nomdevotreBDD;charset=utf8','identifiant', 'mdp',.
+
+----------------------------------------------
