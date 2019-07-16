@@ -50,7 +50,7 @@ Visuel :
 Upload :
 ----------------------------------------------
 
-Fonctionnalités Utilisateurs :
+Upload du site :
 
     - La connexion à la base de donnée se trouve dans le fichier modele.php placé dans le dossier Modele.
     - La connexion se fait actuellement sur un serveur local.      
