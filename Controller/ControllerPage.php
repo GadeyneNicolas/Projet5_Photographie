@@ -5,14 +5,13 @@ require_once 'Model/Pictures.php';
 require_once 'Model/Comments.php';
 
 class ControllerPage {
+        private $pictures;
+        private $comments;
 
-    private $pictures;
-    private $comments;
-
-    public function __construct() {
-        $this->pictures = new Pictures();
-        $this->comments = new Comments();
-    }
+        public function __construct() {
+            $this->pictures = new Pictures();
+            $this->comments = new Comments();
+        }
 
 // Affiche la liste de tous les billets du blog
     public function home() {
@@ -97,4 +96,4 @@ class ControllerPage {
         $view = new View("AddPictures");
         $view->generate([]);
     }
-}
+} // Fin de la classe

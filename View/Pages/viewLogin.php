@@ -1,10 +1,11 @@
-<?php $this->title = "Mon Blog - Connexion !"; ?>
+<?php $this->title = "NG Photographie - Connexion !"; ?> <!-- Titre de la page -->
 
 <section id="connection">
     <div id="connection_text">
         <h2>Connection à l'espace Administration.</h2>
         <p>Retour vers la page <a href="Home">d'acceuil.</a></p>
     </div>
+
     <div id="connection_form">
         <form action="index.php?action=Connection" method="post">
             <label for="pseudo">Votre pseudo</label>

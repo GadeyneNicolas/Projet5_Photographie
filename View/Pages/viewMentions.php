@@ -1,5 +1,6 @@
-<?php $this->title = "Mon Blog - Mentions légales !"; ?>
-<section>   
+<?php $this->title = "NG Photographie - Mentions légales !"; ?> <!-- Titre de la page -->
+
+<section id="mentions">   
     <h2>Informations légales</h2>
     
     <p>
@@ -82,5 +83,4 @@
     <p>
     Velut per avide ulla dicere ulla ordo et ob avide Ptolomaeo iuste angustias enim magis ob est in culpa et rege advectae sunt facta magis veneno et morte Romanum.
     </p>
-
 </section>

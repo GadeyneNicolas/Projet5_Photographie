@@ -1,4 +1,4 @@
-<?php $this->title = "Mon Blog - A propos !"; ?>
+<?php $this->title = "NG Photographie - A propos !"; ?> <!-- Titre de la page -->
 
 <section class="banner_page">
     <div class="banner_page_img">

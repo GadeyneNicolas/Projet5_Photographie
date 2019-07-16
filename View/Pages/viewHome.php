@@ -1,4 +1,4 @@
-<?php $this->title = "NG - Photographie"; ?>
+<?php $this->title = "NG - Photographie"; ?> <!-- Titre de la page -->
 
 <section id="banner_index">
     <div id="banner_index_img">

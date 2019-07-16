@@ -8,7 +8,9 @@
     5- Portfolio.
     6- Application.
     7- Contact.
-    8- Footer.
+    8- Admin.
+    9- Footer.
+    10- Responsive.
 
 */
 
@@ -48,6 +50,14 @@ body {
 
 .content {
     margin-top: 100px;
+}
+
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+p, a {
+    font-family: 'Nunito Sans', sans-serif;
 }
 
 a {
@@ -298,6 +308,18 @@ header nav a:focus {
 #error img {
     width: 100%;
     margin-top: 15%;
+}
+
+#confidential {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#mentions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /*  -----------------------
@@ -610,6 +632,10 @@ footer a {
     font-size: 1em;
     font-weight: bold;
 }
+
+/*  -----------------------
+        10- Responsive.
+    ----------------------- */
 
 @media screen and (max-width: 1024px) {
 

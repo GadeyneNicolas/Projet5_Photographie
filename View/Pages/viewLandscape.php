@@ -1,4 +1,4 @@
-<?php $this->title = "Mon Blog - Portfolio - Paysage !"; ?>
+<?php $this->title = "NG Photographie - Portfolio - Paysage !"; ?> <!-- Titre de la page -->
 
 <section class="banner_page">
     <div class="banner_page_img">

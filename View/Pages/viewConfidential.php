@@ -1,6 +1,6 @@
-<?php $this->title = "Mon Blog - Politique de confidentialité !"; ?>
-<section>
-        
+<?php $this->title = "NG Photographie - Politique de confidentialité !"; ?> <!-- Titre de la page -->
+
+<section id="confidential">  
     <h2>Protection des données</h2>
 
     <h3>Données personnelles</h3>
@@ -57,5 +57,4 @@
     <p>
     Velut per avide ulla dicere ulla ordo et ob avide Ptolomaeo iuste angustias enim magis ob est in culpa et rege advectae sunt facta magis veneno et morte Romanum.
     </p>
-
 </section>

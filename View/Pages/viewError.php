@@ -1,5 +1,4 @@
-<?php $this->title = "Mon Blog - Erreur !"; ?>
-
+<?php $this->title = "NG Photographie - Erreur !"; ?> <!-- Titre de la page -->
 
 <section id="error">
     <h1>Malheureusement une erreur est survenue.</h1>

@@ -4,8 +4,7 @@ require_once 'Model/Model.php';
 
 class Comments extends Model {
 
-    public function getCommentsBDD() {
-        
+    public function getCommentsBDD() {   
         $sql = 'select COMMENT_ID as id,'
                 . ' COMMENT_PSEUDO as pseudo, COMMENT_MAIL as email, COMMENT_CONTENT as content from T_COMMENTS'
                 . ' order by COMMENT_ID desc';
@@ -28,5 +27,4 @@ class Comments extends Model {
 
         $this->executeRequest($sql, array($pseudoComment, $emailComment, $contentComment));
     }
-
-}
+} // Fin de la classe

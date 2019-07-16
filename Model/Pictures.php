@@ -9,7 +9,6 @@ class Pictures extends Model {
         $titlePicsPortrait = htmlspecialchars($titlePicsPortrait);
         $sql = 'insert into T_PICTURES_PORTRAIT(PIC_PORTRAIT_LINK, PIC_PORTRAIT_TITLE, PIC_PORTRAIT_CONTENT)'
             . 'values(?, ?, ?)';
-
         $this->executeRequest($sql, array($linkPortrait, $titlePicsPortrait, $contentPicsPortrait));
     }
 
@@ -32,7 +31,6 @@ class Pictures extends Model {
         $titlePicsAnimal = htmlspecialchars($titlePicsAnimal);
         $sql = 'insert into T_PICTURES_ANIMAL(PIC_ANIMAL_LINK, PIC_ANIMAL_TITLE, PIC_ANIMAL_CONTENT)'
             . 'values(?, ?, ?)';
-
         $this->executeRequest($sql, array($linkAnimal, $titlePicsAnimal, $contentPicsAnimal));
     }
 
@@ -55,7 +53,6 @@ class Pictures extends Model {
         $titlePicsLandscape = htmlspecialchars($titlePicsLandscape);
         $sql = 'insert into T_PICTURES_LANDSCAPE(PIC_LANDSCAPE_LINK, PIC_LANDSCAPE_TITLE, PIC_LANDSCAPE_CONTENT)'
             . 'values(?, ?, ?)';
-
         $this->executeRequest($sql, array($linkLandscape, $titlePicsLandscape, $contentPicsLandscape));
     }
 
@@ -72,4 +69,4 @@ class Pictures extends Model {
         $sql = 'DELETE FROM T_PICTURES_LANDSCAPE WHERE PIC_LANDSCAPE_ID= ?';
         $this->executeRequest($sql, array($idPicsLandscape));
     }
-}
+} // Fin de la classe

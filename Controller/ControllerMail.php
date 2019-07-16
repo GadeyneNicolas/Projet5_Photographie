@@ -3,7 +3,6 @@
 require_once 'View/View.php';
 
 class ControllerMail {
-    
     public function mailto($pseudoContact, $emailContact, $contentContact)
     {
         $header  = 'MIME-Version: 1.0' . "\r\n";
@@ -20,5 +19,4 @@ class ControllerMail {
                 header('location: Home');
         }
     }
-}    
-?>
+}  // Fin de la classe  

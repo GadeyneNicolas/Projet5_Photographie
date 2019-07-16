@@ -1,31 +1,26 @@
 <?php
 
 abstract class Model {
-
-    
     private $bdd;
 
-    protected function executeRequest($sql, $params = null) {
-        if ($params == null) {
-            $result = $this->getBdd()->query($sql); // exécution directe
+        protected function executeRequest($sql, $params = null) {
+            if ($params == null) {
+                $result = $this->getBdd()->query($sql); // exécution directe
+            }
+            else {
+                $result = $this->getBdd()->prepare($sql);  // requête préparée
+                $result->execute($params);
+            }
+            return $result;
         }
-        else {
-            $result = $this->getBdd()->prepare($sql);  // requête préparée
-            $result->execute($params);
+
+        private function getBdd() {
+            if ($this->bdd == null) {
+                // Création de la connexion
+                $this->bdd = new PDO('mysql:host=localhost;dbname=projet5;charset=utf8',
+                        'root', '',
+                        array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+            }
+            return $this->bdd;
         }
-        return $result;
-    }
-
-    private function getBdd() {
-        if ($this->bdd == null) {
-            // Création de la connexion
-            $this->bdd = new PDO('mysql:host=localhost;dbname=projet5;charset=utf8',
-                    'root', '',
-                    array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
-        }
-        return $this->bdd;
-    }
-
-   
-
-}
+} // Fin de la classe

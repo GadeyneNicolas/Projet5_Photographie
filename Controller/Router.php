@@ -122,6 +122,5 @@ class Router {
         else
             throw new Exception("Paramètre '$name' absent");
     }
-
-}
+} // Fin de la classe
 
