@@ -2,6 +2,7 @@
 
 namespace NGADEYNE\Projet5_Photographie\Model;
 use NGADEYNE\Projet5_Photographie\Model\Model;
+use NGADEYNE\Projet5_Photographie\Model\Entities\Pictures;
 
 class PicturesDAO extends Model {
 
@@ -14,11 +15,16 @@ class PicturesDAO extends Model {
     }
 
     public function getPicsBDDPortrait() {
-        
-        $sql = 'select PIC_PORTRAIT_ID as id,'
-                . ' PIC_PORTRAIT_TITLE as title, PIC_PORTRAIT_LINK as link, PIC_PORTRAIT_CONTENT as content from T_PICTURES_PORTRAIT'
-                . ' order by PIC_PORTRAIT_ID desc';
+        $tablePortrait = [];
+        $sql = 'select id'
+                . ' title, link, content from T_PICTURES_PORTRAIT'
+                . ' order by id desc';
         $picturesPortrait = $this->executeRequest($sql);
+        foreach ($picturesPortrait as $picturePortrait) {
+            $objectPortrait = new Pictures($picturePortrait);
+
+            array_push($tablePortrait, $objectPortrait);
+        }
         return $picturesPortrait;
     }
 

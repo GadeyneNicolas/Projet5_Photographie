@@ -2,12 +2,12 @@
 
 <section class="banner_page">
     <div class="banner_page_img">
-        <img src="Contents/Illustration/banner-portfolio.jpg">
+        <img src="Contents/Illustration/banner-portfolio.jpg" alt="image de mise en page portfolio paysage">
     </div>
 </section>
 
 <section id="portfolio_page">
-    <input  class="button" type="button" value="Lien page portfolio" onclick="javascript:location.href='Portfolio'">
+    <a class="button" href="Portfolio">Portfolio</a>
 
     <div id="portfolio_page_global">
         <?php foreach ($picturesLandscape as $picturesLandscapeAffichage): ?>

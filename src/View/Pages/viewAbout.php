@@ -2,7 +2,7 @@
 
 <section class="banner_page">
     <div class="banner_page_img">
-      <img src="Contents/Illustration/banner-about.jpg">
+      <img src="Contents/Illustration/banner-about.jpg" alt="image de mise en page a propos">
     </div>
 </section>
 

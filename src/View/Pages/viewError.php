@@ -7,5 +7,5 @@
             <img src="Contents/Illustration/error.png" alt="illustration page a error">
         </div>
     
-    <input  class="button" type="button" value="Retour à l'accueil" onclick="javascript:location.href='Home'">
+        <a class="button" href="Home">Retour</a>
 </section>

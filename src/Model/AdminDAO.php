@@ -7,9 +7,9 @@ class AdminDAO extends Model {
 
     public function connectionAdmin($pseudo, $mdp)
     {
-        $sql = 'SELECT AD_MOTDEPASSE FROM T_ADMIN WHERE AD_PSEUDO = :pseudo';
+        $sql = 'SELECT AD_PASSWORD FROM T_ADMIN WHERE AD_PSEUDO = :pseudo';
         $requete = $this->executeRequest($sql, array('pseudo' => $pseudo));
-        $hash = $requete->fetch()['AD_MOTDEPASSE'];
+        $hash = $requete->fetch()['AD_PASSWORD'];
 
         return password_verify($mdp, $hash);
     }

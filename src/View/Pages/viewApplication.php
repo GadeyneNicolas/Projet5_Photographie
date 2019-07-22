@@ -2,7 +2,7 @@
 
 <section class="banner_page">
     <div class="banner_page_img">
-        <img src="Contents/Illustration/banner-application.jpg">
+        <img src="Contents/Illustration/banner-application.jpg" alt="image de mise en page application">
     </div>
 </section>
 
@@ -17,7 +17,7 @@
             <p>Si vous n'arrivez pas à faire fonctionner l'application, n'hésitez pas à regarder la FAQ 
             de celle-ci.
             </p>
-            <input class="button" type="button" value="Faq" onclick="javascript:location.href='Faq'">
+            <a class="button" href="Faq">FAQ</a>
     </div>
 
     <section id="chatbot">  

@@ -87,12 +87,7 @@ class ControllerPage {
         $view = new View("Login");
         $view->generate([]);
     }
-
-    public function disconnection() {
-        $view = new View("Disconnection");
-        $view->generate([]);
-    }
-
+    
     public function loginError() {
         $view = new View("LoginError");
         $view->generate([]);

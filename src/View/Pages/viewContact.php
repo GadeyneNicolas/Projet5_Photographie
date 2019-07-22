@@ -2,15 +2,13 @@
 
 <section class="banner_page">
     <div class="banner_page_img">
-        <img src="Contents/Illustration/banner-contact.jpg">
+        <img src="Contents/Illustration/banner-contact.jpg" alt="image de mise en page contact">
     </div>
 </section>
 
 <div id="contact">
     <section id="contact_infos">
         <h2>Contact infos</h2>
-        <br>
-        <br>
         <p><strong>Ville :</strong> Bordeaux</p>
         <p><strong>CP :</strong> 33000</p>
         <p><strong>Adresse :</strong> 33 allée des cerises</p>

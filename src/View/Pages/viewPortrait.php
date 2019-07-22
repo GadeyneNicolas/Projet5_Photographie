@@ -2,19 +2,19 @@
 
 <section class="banner_page">
     <div class="banner_page_img">
-        <img src="Contents/Illustration/banner-portfolio.jpg">
+        <img src="Contents/Illustration/banner-portfolio.jpg" alt="image de mise en page portfolio portrait">
     </div>
 </section>
 
 <section id="portfolio_page">
-    <input  class="button" type="button" value="Lien page portfolio" onclick="javascript:location.href='Portfolio'">
-    
+    <a class="button" href="Portfolio">Portfolio</a>
+
     <div id="portfolio_page_global">
-        <?php foreach ($picturesPortrait as $picturesPortraitAffichage): ?>
+        <?php foreach ($picturesPortrait as $picturePortrait): ?>
             <div class="portfolio_page_img">
-                <?php echo "<img src='".$picturesPortraitAffichage['link']."' alt='image de larticle'>" ?>
+                <?php echo "<img src='".$picturePortrait->getLink()."' alt='image de larticle'>"; ?>
                     <div class="portfolio_page_text">
-                        <h2><?= $picturesPortraitAffichage['title'] ?></h2>
+                        <h2><?= $picturePortrait->getTitle(); ?></h2>
                     </div>
             </div>   
         <?php endforeach; ?>

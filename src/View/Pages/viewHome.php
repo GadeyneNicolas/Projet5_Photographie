@@ -18,7 +18,7 @@
                 mais également de parler avec un Chatbot intelligent qui répond à vos questions à propos de la
                 photographie.
                 </p>
-            <input class="button" type="button" value="En savoir plus" onclick="javascript:location.href='About'">
+                <a class="button" href="About">En savoir plus</a>
     </div>
 </section>
 
@@ -61,7 +61,7 @@
             peut comprendre vos questions et essayer d'y répondre le plus simplement possible grâce à
             des connaissances enregistrés dans sa base de donnée.
             </p>
-        <input class="button" type="button" value="L'application" onclick="javascript:location.href='Application'">
+            <a class="button" href="Application">L'application</a>
     </div>
 
     <div id="application_index_img">
@@ -78,6 +78,6 @@
         <h2>Contactez-moi!</h2>
             <p>Vous souhaitez me contacter? En savoir plus sur mon travail de développeur ou de photographe?
             N'hésitez surtout pas, je tacherai de vous répondre rapidement.</p>
-        <input class="button" type="button" value="Contactez-moi" onclick="javascript:location.href='Contact'">
+            <a class="button" href="Contact">Contactez-moi</a>
     </div>
 </section>

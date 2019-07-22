@@ -58,7 +58,7 @@ class Router {
                     $mdp = $this->getParameter($_POST, 'mot_de_passe');
                     $this->ctrlAdmin->connection($pseudo, $mdp);
                 }   else if (($_GET['action'] == 'Disconnection')) {
-                    $this->ctrlPage->disconnection();
+                    $this->ctrlAdmin->disconnection();
                 }   else if (($_GET['action'] == 'LoginError')) {
                     $this->ctrlPage->loginError();
                 }   else if (($_GET['action'] == 'Admin')) {
