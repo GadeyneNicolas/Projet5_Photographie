@@ -2,78 +2,90 @@
 
 namespace NGADEYNE\Projet5_Photographie\Model;
 use NGADEYNE\Projet5_Photographie\Model\Model;
-use NGADEYNE\Projet5_Photographie\Model\Entities\Pictures;
+use NGADEYNE\Projet5_Photographie\Model\Entities\PicturesPortrait;
+use NGADEYNE\Projet5_Photographie\Model\Entities\PicturesAnimal;
+use NGADEYNE\Projet5_Photographie\Model\Entities\PicturesLandscape;
 
 class PicturesDAO extends Model {
 
-    public function addNewPicsBDDPortrait($linkPortrait, $titlePicsPortrait, $contentPicsPortrait)
+    public function addNewPicsBDDPortrait($picture)
     {
-        $titlePicsPortrait = htmlspecialchars($titlePicsPortrait);
-        $sql = 'insert into T_PICTURES_PORTRAIT(PIC_PORTRAIT_LINK, PIC_PORTRAIT_TITLE, PIC_PORTRAIT_CONTENT)'
+        $sql = 'insert into T_PICTURES_PORTRAIT(link, title, content)'
             . 'values(?, ?, ?)';
-        $this->executeRequest($sql, array($linkPortrait, $titlePicsPortrait, $contentPicsPortrait));
+        $results = $this->executeRequest($sql, array($picture->getLink(), $picture->getTitle(), $picture->getContent()));
+        return $results;
     }
 
     public function getPicsBDDPortrait() {
-        $tablePortrait = [];
-        $sql = 'select id'
-                . ' title, link, content from T_PICTURES_PORTRAIT'
-                . ' order by id desc';
+        $arrayPortrait = [];
+        $sql = 'select id,'
+        . ' title, link, content from T_PICTURES_PORTRAIT'
+        . ' order by id desc';
         $picturesPortrait = $this->executeRequest($sql);
         foreach ($picturesPortrait as $picturePortrait) {
-            $objectPortrait = new Pictures($picturePortrait);
+            $objectPortrait = new PicturesPortrait($picturePortrait);
 
-            array_push($tablePortrait, $objectPortrait);
+            array_push($arrayPortrait, $objectPortrait);
         }
-        return $tablePortrait;
+        return $arrayPortrait;
     }
 
     public function DeletePicsBDDPortrait($idPicsPortrait) {
-        $sql = 'DELETE FROM T_PICTURES_PORTRAIT WHERE PIC_PORTRAIT_ID= ?';
+        $sql = 'DELETE FROM T_PICTURES_PORTRAIT WHERE id= ?';
         $this->executeRequest($sql, array($idPicsPortrait));
     }
 
-    public function addNewPicsBDDAnimal($linkAnimal, $titlePicsAnimal, $contentPicsAnimal)
+    public function addNewPicsBDDAnimal($picture)
     {
-        $titlePicsAnimal = htmlspecialchars($titlePicsAnimal);
-        $sql = 'insert into T_PICTURES_ANIMAL(PIC_ANIMAL_LINK, PIC_ANIMAL_TITLE, PIC_ANIMAL_CONTENT)'
+        $sql = 'insert into T_PICTURES_ANIMAL(link, title, content)'
             . 'values(?, ?, ?)';
-        $this->executeRequest($sql, array($linkAnimal, $titlePicsAnimal, $contentPicsAnimal));
+        $results = $this->executeRequest($sql, array($picture->getLink(), $picture->getTitle(), $picture->getContent()));
+        return $results;
     }
 
     public function getPicsBDDAnimal() {
-        
-        $sql = 'select PIC_ANIMAL_ID as id,'
-                . ' PIC_ANIMAL_TITLE as title, PIC_ANIMAL_LINK as link, PIC_ANIMAL_CONTENT as content from T_PICTURES_ANIMAL'
-                . ' order by PIC_ANIMAL_ID desc';
+        $arrayAnimal = [];
+        $sql = 'select id,'
+        . ' title, link, content from T_PICTURES_ANIMAL'
+        . ' order by id desc';
         $picturesAnimal = $this->executeRequest($sql);
-        return $picturesAnimal;
+        foreach ($picturesAnimal as $pictureAnimal) {
+            $objectAnimal = new PicturesAnimal($pictureAnimal);
+
+            array_push($arrayAnimal, $objectAnimal);
+        }
+        return $arrayAnimal;
     }
 
     public function DeletePicsBDDAnimal($idPicsAnimal) {
-        $sql = 'DELETE FROM T_PICTURES_ANIMAL WHERE PIC_ANIMAL_ID= ?';
+        $sql = 'DELETE FROM T_PICTURES_ANIMAL WHERE id= ?';
         $this->executeRequest($sql, array($idPicsAnimal));
     }
 
-    public function addNewPicsBDDLandscape($linkLandscape, $titlePicsLandscape, $contentPicsLandscape)
+    public function addNewPicsBDDLandscape($picture)
     {
-        $titlePicsLandscape = htmlspecialchars($titlePicsLandscape);
-        $sql = 'insert into T_PICTURES_LANDSCAPE(PIC_LANDSCAPE_LINK, PIC_LANDSCAPE_TITLE, PIC_LANDSCAPE_CONTENT)'
+        $sql = 'insert into T_PICTURES_LANDSCAPE(link, title, content)'
             . 'values(?, ?, ?)';
-        $this->executeRequest($sql, array($linkLandscape, $titlePicsLandscape, $contentPicsLandscape));
+        $results = $this->executeRequest($sql, array($picture->getLink(), $picture->getTitle(), $picture->getContent()));
+        return $results;
     }
 
     public function getPicsBDDLandscape() {
-        
-        $sql = 'select PIC_LANDSCAPE_ID as id,'
-                . ' PIC_LANDSCAPE_TITLE as title, PIC_LANDSCAPE_LINK as link, PIC_LANDSCAPE_CONTENT as content from T_PICTURES_LANDSCAPE'
-                . ' order by PIC_LANDSCAPE_ID desc';
+        $arrayLandscape = [];
+        $sql = 'select id,'
+                . ' title, link, content from T_PICTURES_LANDSCAPE'
+                . ' order by id desc';
         $picturesLandscape = $this->executeRequest($sql);
-        return $picturesLandscape;
+        foreach ($picturesLandscape as $pictureLandscape) {
+            $objectLandscape = new PicturesLandscape($pictureLandscape);
+
+            array_push($arrayLandscape, $objectLandscape);
+        }
+        return $arrayLandscape;
     }
 
     public function DeletePicsBDDLandscape($idPicsLandscape) {
-        $sql = 'DELETE FROM T_PICTURES_LANDSCAPE WHERE PIC_LANDSCAPE_ID= ?';
+        $sql = 'DELETE FROM T_PICTURES_LANDSCAPE WHERE id= ?';
         $this->executeRequest($sql, array($idPicsLandscape));
     }
 } // Fin de la classe

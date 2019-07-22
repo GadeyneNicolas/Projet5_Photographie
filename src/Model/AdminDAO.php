@@ -7,16 +7,16 @@ class AdminDAO extends Model {
 
     public function connectionAdmin($pseudo, $mdp)
     {
-        $sql = 'SELECT AD_PASSWORD FROM T_ADMIN WHERE AD_PSEUDO = :pseudo';
+        $sql = 'SELECT password FROM T_ADMIN WHERE pseudo = :pseudo';
         $requete = $this->executeRequest($sql, array('pseudo' => $pseudo));
-        $hash = $requete->fetch()['AD_PASSWORD'];
+        $hash = $requete->fetch()['password'];
 
         return password_verify($mdp, $hash);
     }
 
     public function getId($pseudo)
     {
-        $sql = 'SELECT AD_ID FROM T_ADMIN WHERE AD_PSEUDO = :pseudo';
+        $sql = 'SELECT id FROM T_ADMIN WHERE pseudo = :pseudo';
         $requete = $this->executeRequest($sql, array('pseudo' => $pseudo));
     }
 } // Fin de la classe

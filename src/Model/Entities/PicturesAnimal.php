@@ -1,10 +1,8 @@
 <?php
 
 namespace NGADEYNE\Projet5_Photographie\Model\Entities;
-use NGADEYNE\Projet5_Photographie\Model\Model;
-use NGADEYNE\Projet5_Photographie\Model\PicturesDAO;
 
-class Pictures {
+class PicturesAnimal {
 
     private $id;
     private $title;
@@ -32,37 +30,45 @@ class Pictures {
       return $this->id;
     }
     // Setter
-    public function setId()
+    public function setId($id)
     {
-      $this->id = $id;
+        $this->id = $id;
     }
 
     // Getter
     public function getTitle()
     {
-      return $this->title;
+      return htmlspecialchars($this->title);
     }
     // Setter
     public function setTitle($title)
     {
-      $this->title = $title;
+      if(strlen($title) >= 3){
+        $this->title = $title;
+      } else{
+        $_SESSION['errors']['Title'] = 'Le pseudo doit avoir au moins 3 caractères';
+      }
     }
 
     // Getter
     public function getContent()
     {
-      return $this->content;
+      return htmlspecialchars($this->content);
     }
     // Setter
     public function setContent($content)
     {
-      $this->content = $content;
+      if(strlen($content) >= 3){
+        $this->content = $content;
+      } else{
+        $_SESSION['errors']['Content'] = 'Le pseudo doit avoir au moins 3 caractères';
+      }
     }
 
     // Getter
     public function getLink()
     {
-      return $this->link;
+      return htmlspecialchars($this->link);
     }
     // Setter
     public function setLink($link)

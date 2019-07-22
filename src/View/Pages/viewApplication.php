@@ -31,11 +31,11 @@
         <h2>Espace commentaire.</h2>
         <p>N'hésitez pas à donner votre avis sur le Chatbot.</p>
 
-        <?php foreach ($comments as $commentsAffichage): ?>
+        <?php foreach ($comments as $comment): ?>
             <div class="comments">  
-                <p><strong> Pseudo : </strong> <?= $commentsAffichage['pseudo'] ?> </p>
+                <p><strong> Pseudo : </strong> <?= $comment->getPseudo(); ?> </p>
                 <p><strong> Commentaire :</strong></p>
-                <p><?= $commentsAffichage['content'] ?></p>
+                <p><?= $comment->getContent(); ?></p>
             </div>
         <?php endforeach; ?>
     </section>

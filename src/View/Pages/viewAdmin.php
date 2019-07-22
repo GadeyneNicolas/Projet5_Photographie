@@ -22,13 +22,13 @@
                     <th>Image</th>
                     <th>Supprimer</th>
                 </tr>
-            <?php foreach ($picturesPortrait as $picturesPortraitAffichage): ?>  <!-- Affichage des données portraits -->
+            <?php foreach ($picturesPortrait as $picturePortrait): ?>  <!-- Affichage des données portraits -->
                 <tr>
-                        <td><?= $picturesPortraitAffichage['id'] ?></td>
+                        <td><?= $picturePortrait->getId();?></td>
                         <td>GADEYNE Nicolas</td>
-                        <td><?= $picturesPortraitAffichage['title'] ?></td>
-                        <td><?= $picturesPortraitAffichage['link'] ?></td>
-                        <?php echo "<td><a href='index.php?action=DeletePicsPortrait&id=".$picturesPortraitAffichage['id']."'>Supprimer</a></td>"; ?>
+                        <td><?= $picturePortrait->getTitle(); ?></td>
+                        <td><?= $picturePortrait->getLink(); ?></td>
+                        <?php echo "<td><a href='index.php?action=DeletePicsPortrait&id=".$picturePortrait->getId()."'>Supprimer</a></td>"; ?>
                 </tr>
             <?php endforeach; ?>
         </table>
@@ -42,13 +42,13 @@
                 <th>Image</th>
                 <th>Supprimer</th>
             </tr>
-            <?php foreach ($picturesAnimal as $picturesAnimalAffichage): ?> <!-- Affichage des données animaux -->
+            <?php foreach ($picturesAnimal as $pictureAnimal): ?>  <!-- Affichage des données Animal -->
                 <tr>
-                    <td><?= $picturesAnimalAffichage['id'] ?></td>
-                    <td>GADEYNE Nicolas</td>
-                    <td><?= $picturesAnimalAffichage['title'] ?></td>
-                    <td><?= $picturesAnimalAffichage['link'] ?></td>
-                    <?php echo "<td><a href='index.php?action=DeletePicsAnimal&id=".$picturesAnimalAffichage['id']."'>Supprimer</a></td>"; ?>
+                        <td><?= $pictureAnimal->getId();?></td>
+                        <td>GADEYNE Nicolas</td>
+                        <td><?= $pictureAnimal->getTitle(); ?></td>
+                        <td><?= $pictureAnimal->getLink(); ?></td>
+                        <?php echo "<td><a href='index.php?action=DeletePicsAnimal&id=".$pictureAnimal->getId()."'>Supprimer</a></td>"; ?>
                 </tr>
             <?php endforeach; ?>
         </table>
@@ -62,13 +62,13 @@
                 <th>Image</th>
                 <th>Supprimer</th>
             </tr>
-            <?php foreach ($picturesLandscape as $picturesLandscapeAffichage): ?>  <!-- Affichage des données paysages -->
+            <?php foreach ($picturesLandscape as $pictureLandscape): ?>  <!-- Affichage des données Lanscape -->
                 <tr>
-                    <td><?= $picturesLandscapeAffichage['id'] ?></td>
-                    <td>GADEYNE Nicolas</td>
-                    <td><?= $picturesLandscapeAffichage['title'] ?></td>
-                    <td><?= $picturesLandscapeAffichage['link'] ?></td>
-                    <?php echo "<td><a href='index.php?action=DeletePicsLandscape&id=".$picturesLandscapeAffichage['id']."'>Supprimer</a></td>"; ?>
+                        <td><?= $pictureLandscape->getId();?></td>
+                        <td>GADEYNE Nicolas</td>
+                        <td><?= $pictureLandscape->getTitle(); ?></td>
+                        <td><?= $pictureLandscape->getLink(); ?></td>
+                        <?php echo "<td><a href='index.php?action=DeletePicsLandscape&id=".$pictureLandscape->getId()."'>Supprimer</a></td>"; ?>
                 </tr>
             <?php endforeach; ?>
         </table>
@@ -82,13 +82,13 @@
                 <th>Contenu</th>
                 <th>Supprimer</th>
             </tr>
-            <?php foreach ($comments as $commentsAffichage): ?>  <!-- Affichage des données comments -->
+            <?php foreach ($comments as $comment): ?>  <!-- Affichage des données comments -->
                 <tr>
-                    <td><?= $commentsAffichage['id'] ?></td>
-                    <td><?= $commentsAffichage['pseudo']  ?></td>
-                    <td><?= $commentsAffichage['email'] ?></td>
-                    <td><?= $commentsAffichage['content'] ?></td>
-                    <?php echo "<td><a href='index.php?action=DeleteComments&id=".$commentsAffichage['id']."'>Supprimer</a></td>"; ?>
+                    <td><?= $comment->getId(); ?></td>
+                    <td><?= $comment->getPseudo();  ?></td>
+                    <td><?= $comment->getMail(); ?></td>
+                    <td><?= $comment->getContent(); ?></td>
+                    <?php echo "<td><a href='index.php?action=DeleteComments&id=".$comment->getId()."'>Supprimer</a></td>"; ?>
                 </tr>
             <?php endforeach; ?>
         </table>

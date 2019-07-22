@@ -10,13 +10,13 @@
     <a class="button" href="Portfolio">Portfolio</a>
     
     <div id="portfolio_page_global">
-        <?php foreach ($picturesAnimal as $picturesAnimalAffichage): ?>
+        <?php foreach ($picturesAnimal as $pictureAnimal): ?>
             <div class="portfolio_page_img">
-                <?php echo "<img src='".$picturesAnimalAffichage['link']."' alt='image de larticle'>" ?>   
+                <?php echo "<img src='".$pictureAnimal->getLink()."' alt='image de larticle'>"; ?>
                     <div class="portfolio_page_text">
-                            <h2><?= $picturesAnimalAffichage['title'] ?></h2>
+                        <h2><?= $pictureAnimal->getTitle(); ?></h2>
                     </div>
-            </div>       
+            </div>   
         <?php endforeach; ?>
     </div>
 

@@ -2,30 +2,35 @@
 
 namespace NGADEYNE\Projet5_Photographie\Model;
 use NGADEYNE\Projet5_Photographie\Model\Model;
+use NGADEYNE\Projet5_Photographie\Model\Entities\Comments;
 
 class CommentsDAO extends Model {
 
     public function getCommentsBDD() {   
-        $sql = 'select COMMENT_ID as id,'
-                . ' COMMENT_PSEUDO as pseudo, COMMENT_MAIL as email, COMMENT_CONTENT as content from T_COMMENTS'
-                . ' order by COMMENT_ID desc';
+        $arrayComments = [];
+        $sql = 'select id,'
+                . ' pseudo, mail, content from T_COMMENTS'
+                . ' order by id desc';
         $comments = $this->executeRequest($sql);
-        return $comments;
+        foreach ($comments as $comment) {
+            $objectComments = new Comments($comment);
+
+            array_push($arrayComments, $objectComments);
+        }
+        return $arrayComments;
     }
 
     public function DeleteCommentBDD($idComment) {
-        $sql = 'DELETE FROM T_COMMENTS WHERE COMMENT_ID = ?';
+        $sql = 'DELETE FROM T_COMMENTS WHERE id = ?';
         $this->executeRequest($sql, array($idComment));
     }
 
-    public function AddCommentBDD($pseudoComment, $emailComment, $contentComment)
+    public function AddCommentBDD($comment)
     {
-        $pseudoComment = htmlspecialchars($pseudoComment);
-        $emailComment = htmlspecialchars($emailComment);
-        $contentComment = htmlspecialchars($contentComment);
-        $sql = 'insert into T_COMMENTS(COMMENT_PSEUDO, COMMENT_MAIL, COMMENT_CONTENT)'
+        $sql = 'insert into T_COMMENTS(pseudo, mail, content)'
             . 'values(?, ?, ?)';
 
-        $this->executeRequest($sql, array($pseudoComment, $emailComment, $contentComment));
+        $results = $this->executeRequest($sql, array($comment->getPseudo(), $comment->getMail(), $comment->getContent()));
+        return $results;
     }
 } // Fin de la classe

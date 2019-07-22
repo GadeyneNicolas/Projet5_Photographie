@@ -1,14 +1,28 @@
 <?php
 
 namespace NGADEYNE\Projet5_Photographie\Entities;
-use NGADEYNE\Projet5_Photographie\Model\Model;
-use NGADEYNE\Projet5_Photographie\Model\AdminDAO;
 
 class Admin {
 
     private $id;
     private $pseudo;
     private $password;
+   
+    public function __construct(array $data) {
+        $this->hydrate($data);
+    }
+
+    public function hydrate(array $data) {
+        foreach ($data as $key => $value) {
+            // On récupère le nom du setter correspondant à l'attribut.
+            $method = 'set'.ucfirst($key);     
+            // Si le setter correspondant existe.
+            if (method_exists($this, $method)) {
+                // On appelle le setter.
+                $this->$method($value);
+            }
+        }
+    }
 
     // Getter
     public function getId()
@@ -24,18 +38,18 @@ class Admin {
     // Getter
     public function getPseudo()
     {
-      return $this->pseudo;
+      return htmlspecialchars($this->pseudo);
     }
     // Setter
     public function setPseudo()
     {
-     $this->pseudo = $pseudo;
+        $this->pseudo = $pseudo;
     }
 
     // Getter
     public function getPassword()
     {
-      return $this->password;
+      return htmlspecialchars($this->password);
     }
     // Setter
     public function setPassword()

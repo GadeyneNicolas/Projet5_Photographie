@@ -3,6 +3,9 @@
 namespace NGADEYNE\Projet5_Photographie\Controller;
 use NGADEYNE\Projet5_Photographie\Model\AdminDAO;
 use NGADEYNE\Projet5_Photographie\Model\PicturesDAO;
+use NGADEYNE\Projet5_Photographie\Model\Entities\PicturesPortrait;
+use NGADEYNE\Projet5_Photographie\Model\Entities\PicturesAnimal;
+use NGADEYNE\Projet5_Photographie\Model\Entities\PicturesLandscape;
 use NGADEYNE\Projet5_Photographie\Engine\View;
 
 class ControllerPictures {
@@ -27,10 +30,19 @@ class ControllerPictures {
         $nomPortrait = "Contents/Pictures/{$titlePicsPortrait}.{$extension_upload}";
         $resultat = move_uploaded_file($_FILES['image']['tmp_name'],$nomPortrait);
         $linkPortrait = $nomPortrait;
-    
-        // // Save Pictures
-        $this->pictures->addNewPicsBDDPortrait($linkPortrait, $titlePicsPortrait, $contentPicsPortrait);
+
+        // Save Pictures
+        $picture = new PicturesPortrait([ 'link' => $linkPortrait,'title' => $titlePicsPortrait, 'content' => $contentPicsPortrait]);
+        if (empty($_SESSION['errors'])) {
+            $this->pictures->addNewPicsBDDPortrait($picture);
+            if ($results > 0) {
+                $_SESSION['confirmations']['Comments'] = "Votre photo a bien été ajouté";
+            } else {
+                $_SESSION['errors']['BDD'] = "Erreur lors de l'ajout à la base de données";
+            }
+        }
         header("location: Admin");
+        exit();
     }
 
     // Delete Pictures
@@ -57,9 +69,18 @@ class ControllerPictures {
         $resultat = move_uploaded_file($_FILES['image']['tmp_name'],$nomAnimal);
         $linkAnimal = $nomAnimal;
     
-        // // Save pictures
-        $this->pictures->addNewPicsBDDAnimal($linkAnimal, $titlePicsAnimal, $contentPicsAnimal);
+        // Save Pictures
+        $picture = new PicturesAnimal([ 'link' => $linkAnimal,'title' => $titlePicsAnimal, 'content' => $contentPicsAnimal]);
+        if (empty($_SESSION['errors'])) {
+            $this->pictures->addNewPicsBDDAnimal($picture);
+            if ($results > 0) {
+                $_SESSION['confirmations']['Comments'] = "Votre photo a bien été ajouté";
+            } else {
+                $_SESSION['errors']['BDD'] = "Erreur lors de l'ajout à la base de données";
+            }
+        }
         header("location: Admin");
+        exit();
     }
 
     // Delete Pictures
@@ -87,9 +108,18 @@ class ControllerPictures {
         $resultat = move_uploaded_file($_FILES['image']['tmp_name'],$nomLandscape);
         $linkLandscape = $nomLandscape;
     
-        // // Sauvegarde du billet
-        $this->pictures->addNewPicsBDDLandscape($linkLandscape, $titlePicsLandscape, $contentPicsLandscape);
+        // Save Pictures
+        $picture = new PicturesLandscape([ 'link' => $linkLandscape,'title' => $titlePicsLandscape, 'content' => $contentPicsLandscape]);
+        if (empty($_SESSION['errors'])) {
+            $this->pictures->addNewPicsBDDLandscape($picture);
+            if ($results > 0) {
+                $_SESSION['confirmations']['Comments'] = "Votre photo a bien été ajouté";
+            } else {
+                $_SESSION['errors']['BDD'] = "Erreur lors de l'ajout à la base de données";
+            }
+        }
         header("location: Admin");
+        exit();
     }
 
     // Delete Pictures

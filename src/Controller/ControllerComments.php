@@ -3,6 +3,7 @@
 namespace NGADEYNE\Projet5_Photographie\Controller;
 use NGADEYNE\Projet5_Photographie\Model\AdminDAO;
 use NGADEYNE\Projet5_Photographie\Model\CommentsDAO;
+use NGADEYNE\Projet5_Photographie\Model\Entities\Comments;
 use NGADEYNE\Projet5_Photographie\Engine\View;
 
 class ControllerComments {
@@ -25,8 +26,18 @@ class ControllerComments {
     }
     // Add Comments
     public function AddNewComments($pseudoComment, $emailComment, $contentComment) {
-        $this->comments->AddCommentBDD($pseudoComment, $emailComment, $contentComment);
-        header("Location: Application");
+        $comment = new Comments(['pseudo' => $pseudoComment, 'mail' => $emailComment, 'content' => $contentComment]);
+        if (empty($_SESSION['errors'])) {
+            $results = $this->comments->AddCommentBDD($comment);
+            if ($results > 0) {
+                $_SESSION['confirmations']['Comments'] = "Votre commentaire a bien été ajouté";
+            } else {
+                $_SESSION['errors']['BDD'] = "Erreur lors de l'ajout à la base de données";
+            }
+        }
+        header('Location: Application');
+        exit();
+        
     }
 
 } // Fin de la classe
