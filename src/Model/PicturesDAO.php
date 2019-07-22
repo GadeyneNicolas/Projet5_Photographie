@@ -25,7 +25,7 @@ class PicturesDAO extends Model {
 
             array_push($tablePortrait, $objectPortrait);
         }
-        return $picturesPortrait;
+        return $tablePortrait;
     }
 
     public function DeletePicsBDDPortrait($idPicsPortrait) {

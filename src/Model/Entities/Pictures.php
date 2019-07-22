@@ -43,7 +43,7 @@ class Pictures {
       return $this->title;
     }
     // Setter
-    public function setTitle()
+    public function setTitle($title)
     {
       $this->title = $title;
     }
@@ -54,7 +54,7 @@ class Pictures {
       return $this->content;
     }
     // Setter
-    public function setContent()
+    public function setContent($content)
     {
       $this->content = $content;
     }
@@ -65,7 +65,7 @@ class Pictures {
       return $this->link;
     }
     // Setter
-    public function setLink()
+    public function setLink($link)
     {
       $this->link = $link;
     }
