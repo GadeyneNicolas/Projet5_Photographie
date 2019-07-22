@@ -1,11 +1,14 @@
 <?php
 
-require_once 'Controller/ControllerPage.php';
-require_once 'Controller/ControllerAdmin.php';
-require_once 'Controller/ControllerPictures.php';
-require_once 'Controller/ControllerMail.php';
-require_once 'Controller/ControllerComments.php';
-require_once 'View/View.php';
+namespace NGADEYNE\Projet5_Photographie\Engine;
+
+use NGADEYNE\Projet5_Photographie\Controller\ControllerPage;
+use NGADEYNE\Projet5_Photographie\Controller\ControllerAdmin;
+use NGADEYNE\Projet5_Photographie\Controller\ControllerPictures;
+use NGADEYNE\Projet5_Photographie\Controller\ControllerMail;
+use NGADEYNE\Projet5_Photographie\Controller\ControllerComments;
+
+use Exception;
 
 class Router {
 
@@ -27,7 +30,7 @@ class Router {
     public function routerRequest() {
         try {
             if (isset($_GET['action'])) {
-
+                
                 if (($_GET['action'] == 'About')) {
                     $this->ctrlPage->about();
                 }   else if (($_GET['action'] == 'Portfolio')) {

@@ -1,8 +1,9 @@
 <?php
 
-require_once 'Model/Model.php';
+namespace NGADEYNE\Projet5_Photographie\Model;
+use NGADEYNE\Projet5_Photographie\Model\Model;
 
-class Admin extends Model {
+class AdminDAO extends Model {
 
     public function connectionAdmin($pseudo, $mdp)
     {

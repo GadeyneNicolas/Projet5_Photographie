@@ -1,8 +1,9 @@
 <?php
 
-require_once 'Model/Model.php';
+namespace NGADEYNE\Projet5_Photographie\Model;
+use NGADEYNE\Projet5_Photographie\Model\Model;
 
-class Comments extends Model {
+class CommentsDAO extends Model {
 
     public function getCommentsBDD() {   
         $sql = 'select COMMENT_ID as id,'

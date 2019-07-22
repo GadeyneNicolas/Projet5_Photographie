@@ -1,16 +1,17 @@
 <?php
 
-require_once 'Model/Admin.php';
-require_once 'Model/Pictures.php';
-require_once 'View/View.php';
+namespace NGADEYNE\Projet5_Photographie\Controller;
+use NGADEYNE\Projet5_Photographie\Model\AdminDAO;
+use NGADEYNE\Projet5_Photographie\Model\PicturesDAO;
+use NGADEYNE\Projet5_Photographie\Engine\View;
 
 class ControllerPictures {
         private $admin;
         private $pictures;
 
         public function __construct() {
-            $this->admin = new Admin();
-            $this->pictures = new Pictures();
+            $this->admin = new AdminDAO();
+            $this->pictures = new PicturesDAO();
         }
 
     public function addNewPicsPortrait($titlePicsPortrait, $contentPicsPortrait) {

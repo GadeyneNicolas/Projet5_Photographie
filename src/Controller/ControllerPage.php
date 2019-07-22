@@ -1,16 +1,17 @@
 <?php
 
-require_once 'View/View.php';
-require_once 'Model/Pictures.php';
-require_once 'Model/Comments.php';
+namespace NGADEYNE\Projet5_Photographie\Controller;
+use NGADEYNE\Projet5_Photographie\Model\PicturesDAO;
+use NGADEYNE\Projet5_Photographie\Model\CommentsDAO;
+use NGADEYNE\Projet5_Photographie\Engine\View;
 
 class ControllerPage {
         private $pictures;
         private $comments;
 
         public function __construct() {
-            $this->pictures = new Pictures();
-            $this->comments = new Comments();
+            $this->pictures = new PicturesDAO();
+            $this->comments = new CommentsDAO();
         }
 
 // Affiche la liste de tous les billets du blog

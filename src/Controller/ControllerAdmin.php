@@ -1,13 +1,14 @@
 <?php
 
-require_once 'Model/Admin.php';
-require_once 'View/View.php';
+namespace NGADEYNE\Projet5_Photographie\Controller;
+use NGADEYNE\Projet5_Photographie\Model\AdminDAO;
+use NGADEYNE\Projet5_Photographie\Engine\View;
 
 class ControllerAdmin {
         private $admin;
 
         public function __construct() {
-            $this->admin = new Admin();
+            $this->admin = new AdminDAO();
         }
 
     public function connection($pseudo, $mdp) {

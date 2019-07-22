@@ -1,16 +1,17 @@
 <?php
 
-require_once 'Model/Admin.php';
-require_once 'Model/Comments.php';
-require_once 'View/View.php';
+namespace NGADEYNE\Projet5_Photographie\Controller;
+use NGADEYNE\Projet5_Photographie\Model\AdminDAO;
+use NGADEYNE\Projet5_Photographie\Model\CommentsDAO;
+use NGADEYNE\Projet5_Photographie\Engine\View;
 
 class ControllerComments {
         private $admin;
         private $comments;
 
         public function __construct() {
-            $this->admin = new Admin();
-            $this->comments = new Comments();
+            $this->admin = new AdminDAO();
+            $this->comments = new CommentsDAO();
         }
     // Delete Comments
     public function DeleteComments($idComment) {

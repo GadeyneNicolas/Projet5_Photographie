@@ -1,8 +1,9 @@
 <?php
 
-require_once 'Model/Model.php';
+namespace NGADEYNE\Projet5_Photographie\Model;
+use NGADEYNE\Projet5_Photographie\Model\Model;
 
-class Pictures extends Model {
+class PicturesDAO extends Model {
 
     public function addNewPicsBDDPortrait($linkPortrait, $titlePicsPortrait, $contentPicsPortrait)
     {

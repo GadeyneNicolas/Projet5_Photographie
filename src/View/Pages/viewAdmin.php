@@ -80,7 +80,6 @@
                 <th>Auteur</th>
                 <th>Email</th>
                 <th>Contenu</th>
-                <th>Signalement</th>
                 <th>Supprimer</th>
             </tr>
             <?php foreach ($comments as $commentsAffichage): ?>  <!-- Affichage des données comments -->
@@ -89,7 +88,6 @@
                     <td><?= $commentsAffichage['pseudo']  ?></td>
                     <td><?= $commentsAffichage['email'] ?></td>
                     <td><?= $commentsAffichage['content'] ?></td>
-                    <td> Signalement </td>
                     <?php echo "<td><a href='index.php?action=DeleteComments&id=".$commentsAffichage['id']."'>Supprimer</a></td>"; ?>
                 </tr>
             <?php endforeach; ?>

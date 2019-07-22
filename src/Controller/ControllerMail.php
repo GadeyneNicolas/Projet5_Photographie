@@ -1,6 +1,7 @@
 <?php
 
-require_once 'View/View.php';
+namespace NGADEYNE\Projet5_Photographie\Controller;
+use NGADEYNE\Projet5_Photographie\Engine\View;
 
 class ControllerMail {
     public function mailto($pseudoContact, $emailContact, $contentContact)
