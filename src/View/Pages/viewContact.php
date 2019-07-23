@@ -22,15 +22,13 @@
 
     <section id="contact_form">
         <h2>Contactez-moi!</h2> 
-            <form method="post" id="mainForm" action="index.php?action=Mail" enctype="multipart/form-data">
+            <form method="post" id="mainForm" action="" enctype="multipart/form-data">
                 <label for="pseudo">Pseudo :</label>
                 <input type="text" data-error="Veuillez entrer votre pseudo" id="pseudo" name="pseudo" placeholder="Pseudo" required>
-                <div class="help-block with-errors"></div>
 
                 <label for="email">Votre adresse E-mail :</label>
                 <input type="email" data-error="Veuilez-renseigner l'adresse mail" id="email" name="email" placeholder="Email" required>
-                <div class="help-block with-errors"></div>
-
+        
                 <label for="content">Votre message :</label>
                 <textarea type="text" id="content" name="content" placeholder="Votre message" required ></textarea>
 
@@ -38,8 +36,3 @@
             </form>
     </section>
 </div> <!-- Div contact -->
-
-
-<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
-<script src="http://cdn.jsdelivr.net/jquery.validation/1.14.0/jquery.validate.min.js"></script>
-<script src="test.js"></script>
