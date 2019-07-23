@@ -5,6 +5,8 @@
 # Le serveur doit suivre les liens symboliques :
 Options +FollowSymlinks
 
+ErrorDocument 404 /PROJET5_PHOTOGRAPHIE/index.php?action=Error
+
 # Activation du module de réécriture d'URL :
 RewriteEngine on
 RewriteBase /PROJET5_PHOTOGRAPHIE/
