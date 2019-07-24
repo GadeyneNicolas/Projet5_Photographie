@@ -1,4 +1,5 @@
-<?php $this->title = "NG Photographie - Portfolio !"; ?> <!-- Titre de la page -->
+<?php $this->title = "NG Photographie - Portfolio !"; ?>
+<!-- Titre de la page -->
 
 <section class="banner_page">
     <div class="banner_page_img">
@@ -15,8 +16,8 @@
         </div>
         <div class="portfolio_presentation_text">
             <h2>Portrait</h2>
-                <p>Vous pouvez trouver ici mes dernières photos de portraits en date.</p>
-                <a class="button" href="Portfolio-Portrait">Voir les photos</a>
+            <p>Vous pouvez trouver ici mes dernières photos de portraits en date.</p>
+            <a class="button" href="Portfolio-Portrait">Voir les photos</a>
         </div>
     </div>
 
@@ -27,8 +28,8 @@
 
         <div class="portfolio_presentation_text">
             <h2>Animalier</h2>
-                <p>Vous pouvez trouver ici mes dernières photos d'animaux en date.</p>
-                <a class="button" href="Portfolio-Animal">Voir les photos</a>
+            <p>Vous pouvez trouver ici mes dernières photos d'animaux en date.</p>
+            <a class="button" href="Portfolio-Animal">Voir les photos</a>
         </div>
     </div>
 
@@ -39,8 +40,8 @@
 
         <div class="portfolio_presentation_text">
             <h2>Paysage</h2>
-                <p>Vous pouvez trouver ici mes dernières photos de paysages en date.</p>
-                <a class="button" href="Portfolio-Landscape">Voir les photos</a>
+            <p>Vous pouvez trouver ici mes dernières photos de paysages en date.</p>
+            <a class="button" href="Portfolio-Landscape">Voir les photos</a>
         </div>
     </div>
 </section>

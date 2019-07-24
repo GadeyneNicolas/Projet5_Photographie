@@ -2,7 +2,6 @@
 
 namespace NGADEYNE\Projet5_Photographie\Controller;
 use NGADEYNE\Projet5_Photographie\Model\AdminDAO;
-use NGADEYNE\Projet5_Photographie\Engine\View;
 
 class ControllerAdmin {
         private $admin;

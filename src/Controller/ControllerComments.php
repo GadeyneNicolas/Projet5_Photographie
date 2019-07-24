@@ -4,7 +4,6 @@ namespace NGADEYNE\Projet5_Photographie\Controller;
 use NGADEYNE\Projet5_Photographie\Model\AdminDAO;
 use NGADEYNE\Projet5_Photographie\Model\CommentsDAO;
 use NGADEYNE\Projet5_Photographie\Model\Entities\Comments;
-use NGADEYNE\Projet5_Photographie\Engine\View;
 
 class ControllerComments {
         private $admin;

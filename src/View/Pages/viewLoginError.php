@@ -1,4 +1,5 @@
-<?php $this->title = "NG Photographie - Erreur de connexion !"; ?> <!-- Titre de la page -->
+<?php $this->title = "NG Photographie - Erreur de connexion !"; ?>
+<!-- Titre de la page -->
 
 <section id="connection_error">
     <h2>Vous vous êtes trompé dans le mot de passe.</h2>

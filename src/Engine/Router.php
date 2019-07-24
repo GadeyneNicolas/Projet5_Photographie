@@ -128,4 +128,3 @@ class Router {
             throw new Exception("Paramètre '$name' absent");
     }
 } // Fin de la classe
-

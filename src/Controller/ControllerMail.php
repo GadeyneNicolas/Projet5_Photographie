@@ -4,25 +4,43 @@ namespace NGADEYNE\Projet5_Photographie\Controller;
 use NGADEYNE\Projet5_Photographie\Engine\View;
 
 class ControllerMail {
-    public function mailto()
+
+    public function mailto($pseudoContact, $emailContact, $contentContact)
     {
-        if($_POST) {
+        if(strlen($emailContact) >= 10){
+            filter_var($mail, FILTER_VALIDATE_EMAIL);
+            $emailContact;
+		} else {
+            echo "Il y a une erreur dans votre adresse mail, veuillez réessayer s'il vous plait.";
+        }
 
-        $pseudoContact = $_POST["pseudo"];
-        $emailContact = $_POST["email"];
-        $contentContact = $_POST["content"];
+        if(strlen($pseudoContact) >= 3){
+            $pseudoContact;
+		} else {
+            echo "Il y a une erreur dans votre pseudo, veuillez réessayer s'il vous plait.";
+        }
 
+        if(strlen($contentContact) >= 15){
+            $contentContact;
+		} else {
+            echo "Il y a une erreur dans votre message, veuillez réessayer s'il vous plait.";
+        }
 
         $header  = 'MIME-Version: 1.0' . "\r\n";
         $header .= 'Content-type: text/html; charset=utf-8' . "\r\n";
-        $header .= 'From: ' . $_POST["email"] . "\r\n";
+        $header .= 'From: ' . $emailContact . "\r\n";
 
-        $message = '<h1>Message envoyé depuis la page Contact de monsite.fr</h1>
-            <p><b>Nom : </b>' . $_POST["pseudo"] . '<br>
-            <b>Email : </b>' . $_POST["email"] . '<br>
-            <b>Message : </b>' . $_POST["content"] . '</p>';
+        $message = '<h1>Message envoyé depuis la page Contact de photographie.nicolas-gadeyne.fr</h1>
+            <p><b>Nom : </b>' . $pseudoContact . '<br>
+            <b>Email : </b>' . $emailContact . '<br>
+            <b>Message : </b>' . $contentContact . '</p>';
 
-        mail('ngadeyne@gmail.com', 'Envoi depuis page Contact', $message, $header);
+        $return = mail('ngadeyne@gmail.com', 'Envoi depuis page Contact', $message, $header);
+            if($return) {
+                echo "Votre message a bien été envoyé. Votre pseudo : ". $pseudoContact . " Votre adresse mail : " . $emailContact . " Votre message : " . $contentContact;
+               // header('location: Contact');
+            } else {
+                echo "Il y a une erreur, veuillez réessayer s'il vous plait.";
         }
     }
-}  // Fin de la classe  
+}  // Fin de la classe

@@ -1,8 +1,9 @@
-<?php $this->title = "NG Photographie - Contact !"; ?> <!-- Titre de la page -->
+<?php $this->title = "NG Photographie - Contact !"; ?>
+<!-- Titre de la page -->
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
-<script src="src/Engine/Js/Form.js"></script>
+<script src="Contents/Js/Form.js"></script>
 
 <section class="banner_page">
     <div class="banner_page_img">
@@ -21,18 +22,18 @@
     </section>
 
     <section id="contact_form">
-        <h2>Contactez-moi!</h2> 
-            <form method="post" id="mainForm" action="" enctype="multipart/form-data">
-                <label for="pseudo">Pseudo :</label>
-                <input type="text" data-error="Veuillez entrer votre pseudo" id="pseudo" name="pseudo" placeholder="Pseudo" required>
+        <h2>Contactez-moi!</h2>
+        <form method="post" id="mainForm" action="index.php?action=Mail" enctype="multipart/form-data">
+            <label for="pseudo">Pseudo :</label>
+            <input type="text" id="pseudo" name="pseudo" placeholder="Pseudo" required>
 
-                <label for="email">Votre adresse E-mail :</label>
-                <input type="email" data-error="Veuilez-renseigner l'adresse mail" id="email" name="email" placeholder="Email" required>
-        
-                <label for="content">Votre message :</label>
-                <textarea type="text" id="content" name="content" placeholder="Votre message" required ></textarea>
+            <label for="email">Votre adresse E-mail :</label>
+            <input type="email" id="email" name="email" placeholder="Email"  required pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}">
 
-                <input class="button" type="submit" id="bouton_contact" value="Ajouter">     
-            </form>
+            <label for="content">Votre message :</label>
+            <textarea type="text" id="content" name="content" placeholder="Votre message" required></textarea>
+
+            <input class="button" type="submit" id="bouton_contact" value="Ajouter">
+        </form>
     </section>
 </div> <!-- Div contact -->

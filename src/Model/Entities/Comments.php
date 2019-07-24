@@ -52,7 +52,12 @@ class Comments {
     }
     // Setter
     public function setMail($mail) {
-        $this->mail = $mail;
+        if(strlen($mail) >= 10){
+			filter_var($mail, FILTER_VALIDATE_EMAIL);
+            $this->mail = $mail;
+		} else{
+			$_SESSION['errors']['Email'] = 'L\'adresse mail doit être au bon format et contenir plus de 10 caracètres.';
+		}
     }
 
     // Getter
