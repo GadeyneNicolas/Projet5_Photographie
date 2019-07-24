@@ -4,11 +4,12 @@ namespace NGADEYNE\Projet5_Photographie\Controller;
 use NGADEYNE\Projet5_Photographie\Model\AdminDAO;
 
 class ControllerAdmin {
-        private $admin;
+    
+    private $admin;
 
-        public function __construct() {
-            $this->admin = new AdminDAO();
-        }
+    public function __construct() {
+        $this->admin = new AdminDAO();
+    }
 
     public function connection($pseudo, $mdp) {
         // Comparaison du pass envoyé via le formulaire avec la base

@@ -6,13 +6,14 @@ use NGADEYNE\Projet5_Photographie\Model\CommentsDAO;
 use NGADEYNE\Projet5_Photographie\Engine\View;
 
 class ControllerPage {
-        private $pictures;
-        private $comments;
+    
+    private $pictures;
+    private $comments;
 
-        public function __construct() {
-            $this->pictures = new PicturesDAO();
-            $this->comments = new CommentsDAO();
-        }
+    public function __construct() {
+        $this->pictures = new PicturesDAO();
+        $this->comments = new CommentsDAO();
+    }
 
 // Affiche la liste de tous les billets du blog
     public function home() {

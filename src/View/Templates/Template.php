@@ -9,7 +9,9 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CNunito+Sans:400,700&display=swap"
         rel="stylesheet">
 
-    <title><?= $title ?></title> <!-- Titre des pages -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+
 </head>
 
 <body>
@@ -53,10 +55,10 @@
 
         <?php
                 if (!empty($_SESSION['errors'])){ ?>
-        <div class="erreurs" style="border: 1px solid red; background-color: rgba(255,156,166,0.58)">
+        <div class="errors">
             <?php
                 foreach ($_SESSION['errors'] as $key => $value){ ?>
-            <p style="color: red"><strong><?= $key ?>: </strong><?= $value ?></p>
+            <p><strong><?= $key ?>: </<strong><?= $value ?></p>
             <?php }
             ?>
         </div>
@@ -67,10 +69,10 @@
         <!-- gestion des confirmations -->
         <?php
 	        if (!empty($_SESSION['confirmations'])){ ?>
-        <div class="confirmations" style="border: 1px solid green; background-color: greenyellow">
+        <div class="confirmations">
             <?php
 			    foreach ($_SESSION['confirmations'] as $key => $value){ ?>
-            <p style="color: green"><strong><?= $key ?>: </strong><?= $value ?></p>
+            <p><strong><?= $key ?>: </strong><?= $value ?></p>
             <?php } ?>
         </div>
 

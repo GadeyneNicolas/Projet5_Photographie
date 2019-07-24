@@ -52,7 +52,7 @@
             <input type="email" id="email" name="email" placeholder="Email" required pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}">
 
             <label for="content">Contenu :</label>
-            <textarea type="text" id="content" name="content" placeholder="Votre contenu"></textarea>
+            <textarea id="content" name="content" placeholder="Votre contenu"></textarea>
 
             <input class="button" type="submit" id="bouton_contact" value="Ajouter">
         </form>

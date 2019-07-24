@@ -8,11 +8,10 @@
 <!-- Titre de la page -->
 
 <div>
-    <input class="button" type="button" value="Portrait" onclick="javascript:showPortrait()">
-
-    <input class="button" type="button" value="Animalier" onclick="javascript:showAnimal()">
-
-    <input class="button" type="button" value="Paysage" onclick="javascript:showLandscape()">
+    
+    <button type="button" class="button" id="show_Portrait">Portrait</button>
+    <button type="button" class="button" id="show_Animal">Animalier</button>
+    <button type="button" class="button" id="show_Landscape">Paysage</button>
 </div>
 
 <div id="showPortrait">
@@ -90,25 +89,7 @@
     </section>
 </div> <!-- Show Landscape -->
 
-<script>
-    function showPortrait() {
-        document.getElementById(`showPortrait`).style.display = `block`;
-        document.getElementById(`showLandscape`).style.display = `none`;
-        document.getElementById(`showAnimal`).style.display = `none`;
-    }
-
-    function showAnimal() {
-        document.getElementById(`showAnimal`).style.display = `block`;
-        document.getElementById(`showLandscape`).style.display = `none`;
-        document.getElementById(`showPortrait`).style.display = `none`;
-    }
-
-    function showLandscape() {
-        document.getElementById(`showLandscape`).style.display = `block`;
-        document.getElementById(`showPortrait`).style.display = `none`;
-        document.getElementById(`showAnimal`).style.display = `none`;
-    }
-</script> <!-- Script JS afin d'afficher le bon formulaire d'ajout -->
+<script src="Contents/Js/Add.js"></script>
 
 <?php
     } else {

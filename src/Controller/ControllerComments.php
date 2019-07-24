@@ -6,13 +6,14 @@ use NGADEYNE\Projet5_Photographie\Model\CommentsDAO;
 use NGADEYNE\Projet5_Photographie\Model\Entities\Comments;
 
 class ControllerComments {
-        private $admin;
-        private $comments;
+    
+    private $admin;
+    private $comments;
 
-        public function __construct() {
-            $this->admin = new AdminDAO();
-            $this->comments = new CommentsDAO();
-        }
+    public function __construct() {
+        $this->admin = new AdminDAO();
+        $this->comments = new CommentsDAO();
+    }
     // Delete Comments
     public function DeleteComments($idComment) {
         if (isset($_SESSION['pseudo']))

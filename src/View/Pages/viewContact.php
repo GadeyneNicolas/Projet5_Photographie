@@ -1,10 +1,6 @@
 <?php $this->title = "NG Photographie - Contact !"; ?>
 <!-- Titre de la page -->
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
-<script src="Contents/Js/Form.js"></script>
-
 <section class="banner_page">
     <div class="banner_page_img">
         <img src="Contents/Illustration/banner-contact.jpg" alt="image de mise en page contact">
@@ -31,9 +27,11 @@
             <input type="email" id="email" name="email" placeholder="Email"  required pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}">
 
             <label for="content">Votre message :</label>
-            <textarea type="text" id="content" name="content" placeholder="Votre message" required></textarea>
+            <textarea id="content" name="content" placeholder="Votre message" required></textarea>
 
             <input class="button" type="submit" id="bouton_contact" value="Ajouter">
         </form>
     </section>
 </div> <!-- Div contact -->
+
+<script src="Contents/Js/Form.js"></script>

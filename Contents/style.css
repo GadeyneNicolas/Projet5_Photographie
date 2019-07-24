@@ -76,6 +76,16 @@ a:focus {
     color: #b49688 !important;
 }
 
+.errors {
+    border: 1px solid red;
+    background-color: rgba(255,156,166,0.58);
+}
+
+.confirmations {
+    border: 1px solid green;
+    background-color: greenyellowd;
+}
+
 /*  -----------------------
         2- Home.
     ----------------------- */
@@ -370,6 +380,10 @@ header nav a:focus {
 .portfolio_presentation_text {
     width: 35vw;
     margin-left: 100px;
+}
+
+#portfolio_page {
+    margin-top: 80px;
 }
 
 #portfolio_page_global {

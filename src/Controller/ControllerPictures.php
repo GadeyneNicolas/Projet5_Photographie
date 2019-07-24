@@ -9,13 +9,13 @@ use NGADEYNE\Projet5_Photographie\Model\Entities\PicturesLandscape;
 use NGADEYNE\Projet5_Photographie\Engine\View;
 
 class ControllerPictures {
-        private $admin;
-        private $pictures;
+    private $admin;
+    private $pictures;
 
-        public function __construct() {
-            $this->admin = new AdminDAO();
-            $this->pictures = new PicturesDAO();
-        }
+    public function __construct() {
+        $this->admin = new AdminDAO();
+        $this->pictures = new PicturesDAO();
+    }
 
     public function addNewPicsPortrait($titlePicsPortrait, $contentPicsPortrait) {
         
