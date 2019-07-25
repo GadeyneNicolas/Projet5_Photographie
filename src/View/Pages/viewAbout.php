@@ -20,12 +20,12 @@
     (Tel que : Krav Maga, Boxe Thai, Karaté). Cela me permet de développer des compétences comme la rigueur
     , le sens de la cohésion ou bien l’esprit de discipline.<p>
 
-      <p>
-        De plus je suis aussi un grand passionné de photographie, je pratique cet art depuis maintenant 2 ans,
-        cela me permet aussi d’améliorer ma vision des choses et d’avoir un meilleur point de vue au niveau
-        graphique.<br>
-        Pour finir, j’apprécie énormément voyager et découvrir de nouvelles cultures ou de nouveaux horizons.
-        J’ai voyagé un peu partout en France (bretagne, région parisienne, sud-ouest, ouest), mais aussi un peu
-        partout dans le monde. (Angleterre, Italie, Pologne, Djibouti et bientôt la Grèce). De plus, c’est pour
-        moi un grand plaisir de pouvoir allier la photographie et le voyage.<p>
+  <p>De plus je suis aussi un grand passionné de photographie, je pratique cet art depuis maintenant 2 ans,
+    cela me permet aussi d’améliorer ma vision des choses et d’avoir un meilleur point de vue au niveau
+    graphique.<br>
+    Pour finir, j’apprécie énormément voyager et découvrir de nouvelles cultures ou de nouveaux horizons.
+    J’ai voyagé un peu partout en France (bretagne, région parisienne, sud-ouest, ouest), mais aussi un peu
+    partout dans le monde. (Angleterre, Italie, Pologne, Djibouti et bientôt la Grèce). De plus, c’est pour
+    moi un grand plaisir de pouvoir allier la photographie et le voyage.<p>
+    
 </section>

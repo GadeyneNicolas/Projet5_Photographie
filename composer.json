@@ -1,8 +1,7 @@
 {
-    "autoload": {
-      "psr-4": {
-        "NGADEYNE\\Projet5_Photographie\\":"src/"
-      }
+  "autoload": {
+    "psr-4": {
+      "NGADEYNE\\Projet5_Photographie\\":"src/"
     }
   }
-  
+}

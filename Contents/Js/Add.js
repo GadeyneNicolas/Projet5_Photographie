@@ -3,8 +3,6 @@ class Add {
         $(`#show_Portrait`).click(this.showPortrait.bind(this));
         $(`#show_Animal`).click(this.showAnimal.bind(this));
         $(`#show_Landscape`).click(this.showLandscape.bind(this));
-        // this.showAnimal();
-        // this.showLandscape();
     }
 
     showPortrait() {
