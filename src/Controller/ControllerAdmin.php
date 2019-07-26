@@ -15,7 +15,6 @@ class ControllerAdmin {
         // Comparaison du pass envoyé via le formulaire avec la base
         $isPasswordCorrect = $this->admin->connectionAdmin($pseudo, $mdp);
         if ($isPasswordCorrect) {
-            session_start();
             $_SESSION['id'] = $this->admin->getId($pseudo);
             $_SESSION['pseudo'] = $pseudo;
 
