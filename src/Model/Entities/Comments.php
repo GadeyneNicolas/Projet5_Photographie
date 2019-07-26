@@ -2,8 +2,6 @@
 
 namespace NGADEYNE\Projet5_Photographie\Model\Entities;
 
-use NGADEYNE\Projet5_Photographie\Model\Entities\Entities;
-
 class Comments extends Entities {
 
     private $id;
@@ -39,21 +37,23 @@ class Comments extends Entities {
     }
     // Setter
     public function setMail($mail) {
-        if(strlen($mail) >= 10){
-			filter_var($mail, FILTER_VALIDATE_EMAIL);
-            $this->mail = $mail;
-		} else{
-			$_SESSION['errors']['Email'] = 'L\'adresse mail doit être au bon format et contenir plus de 10 caracètres.';
-		}
+	    if(strlen($mail) >= 10){
+		    $filtredMail = filter_var($mail, FILTER_VALIDATE_EMAIL);
+		    if($filtredMail != false){
+			    $this->mail = $filtredMail;
+		    }else{
+			    $_SESSION['errors']['Email'] = 'L\'adresse mail doit être au bon format et contenir plus de 10 caracètres.';
+		    }
+	    }
     }
 
     // Getter
     public function getContent() {
         return htmlspecialchars($this->content);
     }
+
     // Setter
     public function setContent($content) {
-        $this->content = $content;
         if(strlen($content) >= 8){
             $this->content = $content;
         } else{

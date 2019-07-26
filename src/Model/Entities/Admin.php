@@ -2,8 +2,6 @@
 
 namespace NGADEYNE\Projet5_Photographie\Entities;
 
-use NGADEYNE\Projet5_Photographie\Model\Entities\Entities;
-
 class Admin extends Entities {
 
     private $id;

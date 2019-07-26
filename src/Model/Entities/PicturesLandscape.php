@@ -1,7 +1,6 @@
 <?php
 
 namespace NGADEYNE\Projet5_Photographie\Model\Entities;
-use NGADEYNE\Projet5_Photographie\Model\Entities\Entities;
 
 class PicturesLandscape extends Entities {
 
