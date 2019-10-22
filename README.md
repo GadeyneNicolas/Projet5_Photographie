@@ -1,6 +1,8 @@
 # Projet5_Photographie
 
 Projet 5 de la formation DWJ d'Openclassrooms.
+Pour en savoir plus :
+https://bleu-blanc-web.fr
 
 ----------------------------------------------
 Contexte :
